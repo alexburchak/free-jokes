@@ -5,9 +5,10 @@ import org.springframework.stereotype.Service;
 import org.translations.free.dao.BaseDAO;
 import org.translations.free.dao.TranslationDAO;
 import org.translations.free.domain.Translation;
+import org.translations.free.service.TranslationService;
 
 @Service
-public class TranslationServiceImpl extends BaseServiceImpl<Long, Translation> {
+public class TranslationServiceImpl extends BaseServiceImpl<Long, Translation> implements TranslationService {
     @Autowired
     private TranslationDAO translationDAO;
 

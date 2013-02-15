@@ -13,4 +13,16 @@ public abstract class BaseServiceImpl<ID extends Serializable, T> implements Bas
     {
         return getDAO().findById(id);
     }
+
+    @Transactional
+    public T save(T entity)
+    {
+        return getDAO().save(entity);
+    }
+
+    @Transactional
+    public void remove(T entity)
+    {
+        getDAO().remove(entity);
+    }
 }

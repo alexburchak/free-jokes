@@ -2,11 +2,11 @@ package org.translations.webapp.controller;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.junit.Before;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.AbstractTransactionalJUnit4SpringContextTests;
+import org.testng.annotations.BeforeTest;
 
 @ContextConfiguration(
         locations = {"classpath:/applicationContext-resources.xml",
@@ -19,7 +19,7 @@ public abstract class BaseControllerTestCase extends AbstractTransactionalJUnit4
     protected transient final Log log = LogFactory.getLog(getClass());
     private int smtpPort = 25250;
 
-    @Before
+    @BeforeTest
     public void onSetUp() {
         smtpPort = smtpPort + (int) (Math.random() * 100);
         // change the port on the mailSender so it doesn't conflict with an

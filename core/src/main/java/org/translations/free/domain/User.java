@@ -1,10 +1,13 @@
 package org.translations.free.domain;
 
+import java.util.Set;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
@@ -14,6 +17,7 @@ public class User {
     private long id;
     private String email;
     private String password;
+    private Set<UserRole> roles;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -48,6 +52,17 @@ public class User {
     public void setPassword(String password)
     {
         this.password = password;
+    }
+
+    @OneToMany(mappedBy = "id.user", cascade = CascadeType.ALL)
+    public Set<UserRole> getRoles()
+    {
+        return roles;
+    }
+
+    public void setRoles(Set<UserRole> roles)
+    {
+        this.roles = roles;
     }
 
     @Override

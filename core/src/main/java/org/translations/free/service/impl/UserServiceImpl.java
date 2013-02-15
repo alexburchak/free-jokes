@@ -5,9 +5,11 @@ import org.springframework.stereotype.Service;
 import org.translations.free.dao.BaseDAO;
 import org.translations.free.dao.UserDAO;
 import org.translations.free.domain.User;
+import org.translations.free.service.UserService;
 
 @Service
-public class UserServiceImpl extends BaseServiceImpl<Long, User> {
+public class UserServiceImpl extends BaseServiceImpl<Long, User> implements UserService
+{
     @Autowired
     private UserDAO userDAO;
 

@@ -1,12 +1,14 @@
 package org.translations.free.dao.impl;
 
 import java.io.Serializable;
-import org.hibernate.Session;
-import org.springframework.beans.factory.annotation.Autowired;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import org.translations.free.dao.BaseDAO;
 
 public abstract class BaseDAOImpl<ID extends Serializable, T> implements BaseDAO<ID, T> {
-    private Session session;
+    @PersistenceContext(name = "persistenceUnit")
+    private EntityManager entityManager;
+
     private Class<T> targetClass;
 
     protected BaseDAOImpl(Class<T> targetClass)
@@ -14,15 +16,19 @@ public abstract class BaseDAOImpl<ID extends Serializable, T> implements BaseDAO
         this.targetClass = targetClass;
     }
 
-    @Autowired
-    public void setSession(Session session)
-    {
-        this.session = session;
-    }
-
-    @SuppressWarnings("unchecked")
     public T findById(ID id)
     {
-        return (T)session.get(targetClass, id);
+        return entityManager.find(targetClass, id);
+    }
+
+    public T save(T entity)
+    {
+        entityManager.persist(entity);
+        return entity;
+    }
+
+    public void remove(T entity)
+    {
+        entityManager.remove(entity);
     }
 }

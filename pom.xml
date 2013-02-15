@@ -28,8 +28,11 @@
         <db.name>free</db.name>
         <dao.framework>hibernate</dao.framework>
         <hibernate.dialect>org.hibernate.dialect.MySQL5InnoDBDialect</hibernate.dialect>
-        <hibernate.version>4.1.9.Final</hibernate.version>
+        <hibernate.showSql>true</hibernate.showSql>
+        <hibernate.version>3.3.2.GA</hibernate.version>
+        <hibernate.entitymanager.version>3.4.0.GA</hibernate.entitymanager.version>
         <hibernate.validator.version>4.3.1.Final</hibernate.validator.version>
+
         <jdbc.groupId>mysql</jdbc.groupId>
         <jdbc.artifactId>mysql-connector-java</jdbc.artifactId>
         <jdbc.version>5.1.22</jdbc.version>
@@ -38,7 +41,11 @@
         <jdbc.username>root</jdbc.username>
         <jdbc.password>root</jdbc.password>
 
-        <spring.version>3.1.3.RELEASE</spring.version>
+        <ehcache.version>2.6.3</ehcache.version>
+
+        <dbcp.version>1.4</dbcp.version>
+
+        <spring.version>3.2.1.RELEASE</spring.version>
         <spring.security.version>3.1.3.RELEASE</spring.security.version>
         <aspectj.version>1.7.1</aspectj.version>
 
@@ -61,14 +68,13 @@
 
         <mockito.version>1.9.5</mockito.version>
         <testng.version>6.8</testng.version>
+
+        <slf4j.version>1.7.1</slf4j.version>
+
+        <commons.lang.version>2.6</commons.lang.version>
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>${jdbc.groupId}</groupId>
-            <artifactId>${jdbc.artifactId}</artifactId>
-            <version>${jdbc.version}</version>
-        </dependency>
         <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-core</artifactId>
@@ -114,6 +120,11 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-tx</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
             <version>${spring.version}</version>
         </dependency>
         <dependency>
@@ -234,7 +245,6 @@
         <profile>
             <id>hsqldb</id>
             <properties>
-                <dbunit.dataTypeFactoryName>org.dbunit.ext.hsqldb.HsqldbDataTypeFactory</dbunit.dataTypeFactoryName>
                 <hibernate.dialect>org.hibernate.dialect.HSQLDialect</hibernate.dialect>
                 <jdbc.groupId>org.hsqldb</jdbc.groupId>
                 <jdbc.artifactId>hsqldb</jdbc.artifactId>
