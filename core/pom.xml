@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
 
@@ -98,14 +100,19 @@
                     <components>
                         <component>
                             <name>hbm2ddl</name>
-                            <implementation>annotationconfiguration</implementation>
+                            <implementation>jpaconfiguration</implementation>
                         </component>
                     </components>
                     <componentProperties>
-                        <drop>true</drop>
-                        <jdk5>true</jdk5>
+                        <persistenceunit>persistenceUnit</persistenceunit>
                         <propertyfile>${project.build.testOutputDirectory}/jdbc.properties</propertyfile>
+                        <jdk5>true</jdk5>
+                        <outputfilename>schema.sql</outputfilename>
                         <skip>${skipTests}</skip>
+                        <drop>false</drop>
+                        <create>false</create>
+                        <export>false</export>
+                        <format>true</format>
                     </componentProperties>
                 </configuration>
                 <executions>
@@ -126,31 +133,14 @@
             </plugin>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
-                <artifactId>hibernate3-maven-plugin</artifactId>
-                <version>2.2</version>
-                <executions>
-                    <execution>
-                        <phase>process-test-resources</phase>
-                        <goals>
-                            <goal>hbm2ddl</goal>
-                        </goals>
-                    </execution>
-                </executions>
+                <artifactId>aspectj-maven-plugin</artifactId>
                 <configuration>
-                    <components>
-                        <component>
-                            <name>hbm2ddl</name>
-                            <implementation>jpaconfiguration</implementation>
-                        </component>
-                    </components>
-                    <componentProperties>
-                        <persistenceunit>persistenceUnit</persistenceunit>
-                        <outputfilename>schema.sql</outputfilename>
-                        <drop>false</drop>
-                        <create>true</create>
-                        <export>false</export>
-                        <format>true</format>
-                    </componentProperties>
+                    <aspectLibraries>
+                        <aspectLibrary>
+                            <groupId>org.springframework</groupId>
+                            <artifactId>spring-aspects</artifactId>
+                        </aspectLibrary>
+                    </aspectLibraries>
                 </configuration>
             </plugin>
         </plugins>

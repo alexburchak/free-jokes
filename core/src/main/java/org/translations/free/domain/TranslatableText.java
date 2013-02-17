@@ -9,6 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "translatable_text", uniqueConstraints = {@UniqueConstraint(name = "translatable_text_uk", columnNames = {"translatable_text"})})
@@ -33,6 +34,7 @@ public class TranslatableText
 
     @Enumerated(EnumType.STRING)
     @Column(name = "status", nullable = false, length = 32)
+    @NotNull
     public TranslationStatus getStatus()
     {
         return status;
@@ -44,6 +46,7 @@ public class TranslatableText
     }
 
     @Column(name = "translatable_text", nullable = false, updatable = false)
+    @NotNull
     public String getTranslatableText()
     {
         return translatableText;

@@ -4,7 +4,7 @@
     <facet type="jpa" name="JPA">
       <configuration>
         <setting name="validation-enabled" value="true" />
-        <setting name="provider-name" value="" />
+        <setting name="provider-name" value="Hibernate" />
         <datasource-mapping>
           <factory-entry name="persistenceUnit" />
         </datasource-mapping>
@@ -19,10 +19,9 @@
       </configuration>
     </facet>
   </component>
-  <component name="NewModuleRootManager" inherit-compiler-output="false">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7" inherit-compiler-output="false">
     <output url="file://$MODULE_DIR$/out/core/classes" />
     <output-test url="file://$MODULE_DIR$/out/core/test-classes" />
-    <exclude-output />
     <content url="file://$MODULE_DIR$/core">
       <sourceFolder url="file://$MODULE_DIR$/core/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/core/src/test/java" isTestSource="true" />
@@ -33,7 +32,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="main" level="project" />
-    <orderEntry type="library" exported="" name="test" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="test" level="project" />
   </component>
 </module>
 

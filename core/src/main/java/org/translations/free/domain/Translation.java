@@ -9,6 +9,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
+import javax.validation.constraints.NotNull;
+
 import org.hibernate.annotations.ForeignKey;
 
 @Entity
@@ -37,6 +39,7 @@ public class Translation
     @ManyToOne(optional = false)
     @ForeignKey(name = "translation_translatable_text_fk")
     @JoinColumn(name = "translatable_text", nullable = false, updatable = false)
+    @NotNull
     public TranslatableText getTranslatableText()
     {
         return translatableText;
@@ -48,6 +51,7 @@ public class Translation
     }
 
     @Column(name = "translation_text", nullable = false)
+    @NotNull
     public String getTranslationText()
     {
         return translationText;
@@ -59,6 +63,7 @@ public class Translation
     }
 
     @Column(name = "language", nullable = false, length = 2)
+    @NotNull
     public String getLanguage()
     {
         return language;
@@ -72,6 +77,7 @@ public class Translation
     @ManyToOne(optional = false)
     @ForeignKey(name = "translation_submitter_fk")
     @JoinColumn(name = "submitter", nullable = false, updatable = false)
+    @NotNull
     public User getSubmitter()
     {
         return submitter;

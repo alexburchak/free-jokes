@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.translations</groupId>
@@ -23,7 +25,7 @@
         <copyright.year>2013</copyright.year>
 
         <webtest.target>run-all-tests</webtest.target>
-        <target.jdk>1.6</target.jdk>
+        <target.jdk>1.7</target.jdk>
 
         <db.name>free</db.name>
         <dao.framework>hibernate</dao.framework>
@@ -179,6 +181,69 @@
         <defaultGoal>install</defaultGoal>
 
         <plugins/>
+
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>aspectj-maven-plugin</artifactId>
+                    <version>1.4</version>
+                    <dependencies>
+                        <dependency>
+                            <groupId>org.aspectj</groupId>
+                            <artifactId>aspectjrt</artifactId>
+                            <version>${aspectj.version}</version>
+                        </dependency>
+                        <dependency>
+                            <groupId>org.aspectj</groupId>
+                            <artifactId>aspectjtools</artifactId>
+                            <version>${aspectj.version}</version>
+                        </dependency>
+                    </dependencies>
+                    <executions>
+                        <execution>
+                            <id>ajc-process-classes</id>
+                            <phase>process-classes</phase>
+                            <goals>
+                                <goal>compile</goal>
+                            </goals>
+                            <configuration>
+                                <weaveDirectories>
+                                    <weaveDirectory>${project.build.directory}/classes</weaveDirectory>
+                                </weaveDirectories>
+                            </configuration>
+                        </execution>
+                        <execution>
+                            <id>ajc-process-test-classes</id>
+                            <phase>process-test-classes</phase>
+                            <goals>
+                                <goal>test-compile</goal>
+                            </goals>
+                            <configuration>
+                                <weaveDirectories>
+                                    <weaveDirectory>${project.build.directory}/test-classes</weaveDirectory>
+                                </weaveDirectories>
+                            </configuration>
+                        </execution>
+                    </executions>
+                    <configuration>
+                        <showWeaveInfo>true</showWeaveInfo>
+                        <forceAjcCompile>true</forceAjcCompile>
+                        <sources/>
+                        <testSources/>
+                        <outxml>true</outxml>
+                        <source>${target.jdk}</source>
+                        <target>${target.jdk}</target>
+                        <aspectLibraries>
+                            <aspectLibrary>
+                                <groupId>org.springframework</groupId>
+                                <artifactId>spring-aspects</artifactId>
+                            </aspectLibrary>
+                        </aspectLibraries>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
     </build>
 
     <reporting>
@@ -209,14 +274,15 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>cobertura-maven-plugin</artifactId>
+                <version>2.5.2</version>
                 <configuration>
                     <instrumentation>
                         <excludes>
                             <exclude>**/model/*.class</exclude>
                         </excludes>
                     </instrumentation>
+                    <check>true</check>
                 </configuration>
-                <version>2.5.2</version>
             </plugin>
             <plugin>
                 <artifactId>maven-javadoc-plugin</artifactId>
@@ -230,7 +296,7 @@
                 <artifactId>maven-pmd-plugin</artifactId>
                 <configuration>
                     <linkXRef>true</linkXRef>
-                    <targetJdk>1.6</targetJdk>
+                    <targetJdk>${target.jdk}</targetJdk>
                 </configuration>
                 <version>2.7.1</version>
             </plugin>

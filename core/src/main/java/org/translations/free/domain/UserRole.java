@@ -11,6 +11,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
+import javax.validation.constraints.NotNull;
+
 import org.apache.commons.lang.StringUtils;
 import org.hibernate.annotations.ForeignKey;
 
@@ -27,6 +29,7 @@ public class UserRole
         @ManyToOne(optional = false)
         @JoinColumn(name = "user", nullable = false)
         @ForeignKey(name = "user_role_user_fk")
+        @NotNull
         public User getUser()
         {
             return user;
@@ -39,6 +42,7 @@ public class UserRole
 
         @Enumerated(EnumType.STRING)
         @Column(name = "role", nullable = false, length = 32)
+        @NotNull
         public Role getRole()
         {
             return role;
