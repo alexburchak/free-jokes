@@ -14,7 +14,7 @@
 
     <context:annotation-config/>
 
-    <context:component-scan base-package="org.translations"/>
+    <context:component-scan base-package="net.abbreviations"/>
 
     <aop:aspectj-autoproxy/>
 

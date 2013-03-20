@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+       http://activemq.apache.org/schema/core http://activemq.apache.org/schema/core/activemq-core.xsd">
+
+    <!-- Don't use persistency nor jmx when unit testing -->
+    <broker xmlns="http://activemq.apache.org/schema/core"
+            brokerName="localhost"
+            useJmx="false"
+            useShutdownHook="false"
+            dataDirectory="./target/activemq-data"
+            persistent="false"
+            schedulerSupport="true">
+
+        <transportConnectors>
+            <transportConnector name="openwire" uri="tcp://localhost:61616" />
+        </transportConnectors>
+
+        <systemUsage>
+            <systemUsage>
+                <memoryUsage>
+                    <memoryUsage limit="64 mb"/>
+                </memoryUsage>
+                <storeUsage>
+                    <storeUsage limit="10 gb"/>
+                </storeUsage>
+                <tempUsage>
+                    <tempUsage limit="5 gb"/>
+                </tempUsage>
+            </systemUsage>
+        </systemUsage>
+    </broker>
+</beans>

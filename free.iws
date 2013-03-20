@@ -2,37 +2,119 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="resources" />
+      <artifact name="test-classes" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a0ffef9-95f9-48b8-aa1c-af359e86ec8d" name="Default" comment="Making tests work">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/org/translations/free/domain/TranslatableText.java" afterPath="$PROJECT_DIR$/core/src/main/java/org/translations/free/domain/TranslatableText.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/org/translations/free/domain/Translation.java" afterPath="$PROJECT_DIR$/core/src/main/java/org/translations/free/domain/Translation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/org/translations/free/domain/User.java" afterPath="$PROJECT_DIR$/core/src/main/java/org/translations/free/domain/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/org/translations/free/domain/UserRole.java" afterPath="$PROJECT_DIR$/core/src/main/java/org/translations/free/domain/UserRole.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/test/java/org/translations/free/service/impl/UserServiceTest.java" afterPath="$PROJECT_DIR$/core/src/test/java/org/translations/free/service/impl/UserServiceTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/main/asm-3.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/main/cglib-2.2.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/main/commons-fileupload-1.2.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/main/hibernate-annotations-3.5.6-Final.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/main/hibernate-commons-annotations-3.2.0.Final.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/main/hibernate-core-3.5.6-Final.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/main/hibernate-ehcache-3.5.6-Final.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/main/hibernate-entitymanager-3.5.6-Final.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/main/javassist-3.9.0.GA.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/src/main/java/net/abbreviations/core/dao/AbbreviationDAO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/src/main/java/net/abbreviations/core/dao/impl/AbbreviationDAOImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/src/main/java/net/abbreviations/core/service/AbbreviationService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/src/main/java/net/abbreviations/core/service/impl/AbbreviationServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/src/main/java/net/abbreviations/core/dao/DescriptionDAO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/src/main/java/net/abbreviations/core/dao/impl/DescriptionDAOImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/src/main/java/net/abbreviations/core/service/DescriptionService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/src/main/java/net/abbreviations/core/service/impl/DescriptionServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/src/main/java/net/abbreviations/core/domain/Domain.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/src/main/java/net/abbreviations/core/dao/DomainDAO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/src/main/java/net/abbreviations/core/dao/impl/DomainDAOImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/src/main/java/net/abbreviations/core/service/DomainService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/src/main/java/net/abbreviations/core/service/impl/DomainServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/src/main/java/net/abbreviations/core/util/HashCodeUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/src/main/java/net/abbreviations/core/application/InfrastructureException.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/src/main/java/net/abbreviations/core/dao/UserDAO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/src/main/java/net/abbreviations/core/service/UserService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/src/test/java/net/abbreviations/core/service/impl/UserServiceTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/src/test/resources/activemq.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/src/test/resources/log4j-activemq.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/src/main/java/org/translations/free/dao/TranslatableTextDAO.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/src/main/java/org/translations/free/dao/TranslationDAO.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/src/main/java/org/translations/free/dao/UserDAO.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/src/main/java/org/translations/free/dao/impl/TranslatableTextDAOImpl.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/src/main/java/org/translations/free/dao/impl/TranslationDAOImpl.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/src/main/java/org/translations/free/service/TranslatableTextService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/src/main/java/org/translations/free/service/TranslationService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/src/main/java/org/translations/free/service/UserService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/src/main/java/org/translations/free/service/impl/TranslatableTextServiceImpl.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/src/main/java/org/translations/free/service/impl/TranslationServiceImpl.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/src/main/resources/default-data.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/src/main/resources/sql-map-config.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/src/test/java/org/translations/free/service/impl/UserServiceTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/src/test/resources/sample-data.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/main/hibernate-annotations-3.4.0.GA.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/main/hibernate-commons-annotations-3.1.0.GA.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/main/hibernate-core-3.3.2.GA.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/main/hibernate-ehcache-3.3.2.GA.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/main/hibernate-entitymanager-3.4.0.GA.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/main/javassist-3.4.GA.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/main/resources/mail.properties" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/src/main/java/org/translations/free/dao/BaseDAO.java" afterPath="$PROJECT_DIR$/core/src/main/java/net/abbreviations/core/dao/BaseDAO.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/src/main/java/org/translations/free/dao/impl/BaseDAOImpl.java" afterPath="$PROJECT_DIR$/core/src/main/java/net/abbreviations/core/dao/impl/BaseDAOImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/src/main/java/org/translations/free/dao/impl/UserDAOImpl.java" afterPath="$PROJECT_DIR$/core/src/main/java/net/abbreviations/core/dao/impl/UserDAOImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/src/main/java/org/translations/free/domain/Role.java" afterPath="$PROJECT_DIR$/core/src/main/java/net/abbreviations/core/domain/Role.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/src/main/java/org/translations/free/domain/TranslatableText.java" afterPath="$PROJECT_DIR$/core/src/main/java/net/abbreviations/core/domain/Abbreviation.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/src/main/java/org/translations/free/domain/Translation.java" afterPath="$PROJECT_DIR$/core/src/main/java/net/abbreviations/core/domain/Description.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/src/main/java/org/translations/free/domain/TranslationStatus.java" afterPath="$PROJECT_DIR$/core/src/main/java/net/abbreviations/core/domain/Status.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/src/main/java/org/translations/free/domain/User.java" afterPath="$PROJECT_DIR$/core/src/main/java/net/abbreviations/core/domain/User.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/src/main/java/org/translations/free/domain/UserRole.java" afterPath="$PROJECT_DIR$/core/src/main/java/net/abbreviations/core/domain/UserRole.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/src/main/java/org/translations/free/service/BaseService.java" afterPath="$PROJECT_DIR$/core/src/main/java/net/abbreviations/core/service/BaseService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/src/main/java/org/translations/free/service/impl/BaseServiceImpl.java" afterPath="$PROJECT_DIR$/core/src/main/java/net/abbreviations/core/service/impl/BaseServiceImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/src/main/java/org/translations/free/service/impl/UserServiceImpl.java" afterPath="$PROJECT_DIR$/core/src/main/java/net/abbreviations/core/service/impl/UserServiceImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/src/main/resources/ehcache.xml" afterPath="$PROJECT_DIR$/core/src/test/resources/ehcache.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/main/java/org/translations/webapp/controller/BaseFormController.java" afterPath="$PROJECT_DIR$/web/src/main/java/org/translations/webapp/controller/BaseFormController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/main/resources/applicationContext-resources.xml" afterPath="$PROJECT_DIR$/web/src/main/resources/applicationContext-resources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/resources/applicationContext.xml" afterPath="$PROJECT_DIR$/core/src/main/resources/applicationContext.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core.iml" afterPath="$PROJECT_DIR$/core.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/main/resources/ehcache.xml" afterPath="$PROJECT_DIR$/web/src/main/resources/ehcache.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/free.ipr" afterPath="$PROJECT_DIR$/free.ipr" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/free.iws" afterPath="$PROJECT_DIR$/free.iws" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/main/resources/log4j.xml" afterPath="$PROJECT_DIR$/web/src/main/resources/log4j.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/main/resources/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/web/src/main/resources/META-INF/persistence.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/pom.xml" afterPath="$PROJECT_DIR$/core/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/main/webapp/common/taglibs.jsp" afterPath="$PROJECT_DIR$/web/src/main/webapp/common/taglibs.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/test/resources/test-applicationContext.xml" afterPath="$PROJECT_DIR$/core/src/test/resources/test-applicationContext.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/web.iml" afterPath="$PROJECT_DIR$/web/web.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/web.xml" />
     </list>
     <ignored path="free.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="1a0ffef9-95f9-48b8-aa1c-af359e86ec8d" time="1361131415408" ignored="false" />
-    <file path="/fragment.java" changelist="1a0ffef9-95f9-48b8-aa1c-af359e86ec8d" time="1361084618916" ignored="false" />
-    <file path="/test-applicationContext.xml" changelist="1a0ffef9-95f9-48b8-aa1c-af359e86ec8d" time="1361052467576" ignored="false" />
-    <file path="/pom.xml" changelist="1a0ffef9-95f9-48b8-aa1c-af359e86ec8d" time="1361084027317" ignored="false" />
-    <file path="/DummyFile.xpath" changelist="1a0ffef9-95f9-48b8-aa1c-af359e86ec8d" time="1361046457897" ignored="false" />
+    <file path="/applicationContext.xml" changelist="1a0ffef9-95f9-48b8-aa1c-af359e86ec8d" time="1363678555487" ignored="false" />
+    <file path="/DomainService.java" changelist="1a0ffef9-95f9-48b8-aa1c-af359e86ec8d" time="1363678293029" ignored="false" />
+    <file path="/TranslationService.java" changelist="1a0ffef9-95f9-48b8-aa1c-af359e86ec8d" time="1363678280831" ignored="false" />
+    <file path="/DomainServiceImpl.java" changelist="1a0ffef9-95f9-48b8-aa1c-af359e86ec8d" time="1363678254133" ignored="false" />
+    <file path="/DomainDAOImpl.java" changelist="1a0ffef9-95f9-48b8-aa1c-af359e86ec8d" time="1363678183464" ignored="false" />
+    <file path="/DomainDAO.java" changelist="1a0ffef9-95f9-48b8-aa1c-af359e86ec8d" time="1363678141689" ignored="false" />
+    <file path="/UserRole.java" changelist="1a0ffef9-95f9-48b8-aa1c-af359e86ec8d" time="1363677981085" ignored="false" />
+    <file path="/Role.java" changelist="1a0ffef9-95f9-48b8-aa1c-af359e86ec8d" time="1363677876780" ignored="false" />
+    <file path="/Description.java" changelist="1a0ffef9-95f9-48b8-aa1c-af359e86ec8d" time="1363677825438" ignored="false" />
+    <file path="/Domain.java" changelist="1a0ffef9-95f9-48b8-aa1c-af359e86ec8d" time="1363677707888" ignored="false" />
+    <file path="/Abbreviation.java" changelist="1a0ffef9-95f9-48b8-aa1c-af359e86ec8d" time="1363677613105" ignored="false" />
+    <file path="/Status.java" changelist="1a0ffef9-95f9-48b8-aa1c-af359e86ec8d" time="1363677413813" ignored="false" />
+    <file path="/Dummy.txt" changelist="1a0ffef9-95f9-48b8-aa1c-af359e86ec8d" time="1363708526392" ignored="false" />
+    <file path="/fragment.java" changelist="1a0ffef9-95f9-48b8-aa1c-af359e86ec8d" time="1363708526392" ignored="false" />
+    <file path="/test-applicationContext.xml" changelist="1a0ffef9-95f9-48b8-aa1c-af359e86ec8d" time="1363678544240" ignored="false" />
+    <file path="/pom.xml" changelist="1a0ffef9-95f9-48b8-aa1c-af359e86ec8d" time="1363707709740" ignored="false" />
+    <file path="/DummyFile.xpath" changelist="1a0ffef9-95f9-48b8-aa1c-af359e86ec8d" time="1363682381632" ignored="false" />
     <file path="/BaseDAOImpl.java" changelist="1a0ffef9-95f9-48b8-aa1c-af359e86ec8d" time="1361078856882" ignored="false" />
     <file path="/EntityManagerFactoryLocatorImpl.java" changelist="1a0ffef9-95f9-48b8-aa1c-af359e86ec8d" time="1361051127912" ignored="false" />
     <file path="/EntityManagerFactoryLocator.java" changelist="1a0ffef9-95f9-48b8-aa1c-af359e86ec8d" time="1361051169234" ignored="false" />
     <file path="/UserServiceTest.java" changelist="1a0ffef9-95f9-48b8-aa1c-af359e86ec8d" time="1361079018276" ignored="false" />
     <file path="/User.java" changelist="1a0ffef9-95f9-48b8-aa1c-af359e86ec8d" time="1361131662067" ignored="false" />
     <file path="/Translation.java" changelist="1a0ffef9-95f9-48b8-aa1c-af359e86ec8d" time="1361131708972" ignored="false" />
+    <file path="/activemq.xml" changelist="1a0ffef9-95f9-48b8-aa1c-af359e86ec8d" time="1363707812594" ignored="false" />
+    <file path="/ehcache.xml" changelist="1a0ffef9-95f9-48b8-aa1c-af359e86ec8d" time="1363708197904" ignored="false" />
+    <file path="/log4j.xml" changelist="1a0ffef9-95f9-48b8-aa1c-af359e86ec8d" time="1363708249888" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +202,22 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="jar://$PROJECT_DIR$/../spring-webmvc-3.2.1.RELEASE-sources.jar!/org/springframework/web/servlet/DispatcherServlet.java" line="880" class="org.springframework.web.servlet.DispatcherServlet" package="org.springframework.web.servlet">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -155,7 +252,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -223,73 +320,75 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="UserServiceTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/src/test/java/org/translations/free/service/impl/UserServiceTest.java">
+      <file leaf-file-name="log4j.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/src/main/resources/log4j.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="26" selection-start="593" selection-end="593" vertical-scroll-proportion="0.0">
+            <state line="29" column="29" selection-start="902" selection-end="902" vertical-scroll-proportion="0.0">
+              <folding>
+                <marker date="1363708289740" expanded="true" signature="456:501" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="web.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/web.xml">
+          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
+            <state />
+          </provider>
+          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="36" column="0" selection-start="1220" selection-end="1220" vertical-scroll-proportion="-7.576923">
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/src/main/webapp/index.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="32" selection-start="72" selection-end="72" vertical-scroll-proportion="-1.875">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/core/pom.xml">
+      <file leaf-file-name="mainMenu.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/pages/mainMenu.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="34" selection-start="1861" selection-end="1861" vertical-scroll-proportion="0.38081396">
+            <state line="0" column="32" selection-start="32" selection-end="32" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/src/main/java/org/translations/free/domain/User.java">
+      <file leaf-file-name="taglibs.jsp" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/src/main/webapp/common/taglibs.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="77" column="12" selection-start="2232" selection-end="2232" vertical-scroll-proportion="0.0">
+            <state line="12" column="38" selection-start="843" selection-end="843" vertical-scroll-proportion="0.30927834">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Translation.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/src/main/java/org/translations/free/domain/Translation.java">
+      <file leaf-file-name="DispatcherServlet.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/../spring-webmvc-3.2.1.RELEASE-sources.jar!/org/springframework/web/servlet/DispatcherServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="96" column="0" selection-start="2398" selection-end="2398" vertical-scroll-proportion="0.0">
+            <state line="885" column="39" selection-start="40287" selection-end="40287" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TranslatableText.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/src/main/java/org/translations/free/domain/TranslatableText.java">
+      <file leaf-file-name="ContextLoaderListener.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/../spring-web-3.2.1.RELEASE-sources.jar!/org/springframework/web/context/ContextLoaderListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="0" selection-start="1306" selection-end="1306" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TranslationStatus.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/src/main/java/org/translations/free/domain/TranslationStatus.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="12" selection-start="51" selection-end="51" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserRole.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/src/main/java/org/translations/free/domain/UserRole.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="77" column="26" selection-start="1994" selection-end="1994" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NotNull.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/lib/main/validation-api-1.0.0.GA.jar!/javax/validation/constraints/NotNull.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="21" selection-start="542" selection-end="542" vertical-scroll-proportion="-4.08">
+            <state line="40" column="13" selection-start="1647" selection-end="1647" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -325,22 +424,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/core/src/test/resources/applicationContext-resources.xml" />
-        <option value="$PROJECT_DIR$/web/src/test/java/org/translations/webapp/controller/BaseControllerTestCase.java" />
-        <option value="$PROJECT_DIR$/core/src/test/resources/jdbc.properties" />
-        <option value="$PROJECT_DIR$/core/src/main/resources/META-INF/persistence.xml" />
-        <option value="$PROJECT_DIR$/core/src/main/java/org/translations/free/dao/impl/BaseDAOImpl.java" />
-        <option value="$PROJECT_DIR$/core/src/test/resources/persistence.properties" />
-        <option value="$PROJECT_DIR$/core/src/main/java/org/translations/free/support/EntityManagerFactoryLocator.java" />
-        <option value="$PROJECT_DIR$/core/src/main/java/org/translations/free/support/EntityManagerFactoryLocatorImpl.java" />
-        <option value="$PROJECT_DIR$/core/src/test/resources/test-applicationContext.xml" />
-        <option value="$PROJECT_DIR$/core/pom.xml" />
-        <option value="$PROJECT_DIR$/core/src/test/java/org/translations/free/service/impl/UserServiceTest.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/net/abbreviations/core/service/DomainService.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/net/abbreviations/core/service/impl/DomainServiceImpl.java" />
+        <option value="$PROJECT_DIR$/core/src/main/resources/sql-map-config.xml" />
+        <option value="$PROJECT_DIR$/core/src/main/resources/applicationContext.xml" />
+        <option value="$PROJECT_DIR$/core/src/test/resources/log4j.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/core/src/main/java/org/translations/free/domain/User.java" />
-        <option value="$PROJECT_DIR$/core/src/main/java/org/translations/free/domain/Translation.java" />
-        <option value="$PROJECT_DIR$/core/src/main/java/org/translations/free/domain/TranslatableText.java" />
-        <option value="$PROJECT_DIR$/core/src/main/java/org/translations/free/domain/UserRole.java" />
+        <option value="$PROJECT_DIR$/core/src/main/resources/activemq.xml" />
+        <option value="$PROJECT_DIR$/core/pom.xml" />
+        <option value="$PROJECT_DIR$/core/src/test/resources/test-applicationContext.xml" />
+        <option value="$PROJECT_DIR$/core/src/test/resources/activemq.xml" />
+        <option value="$PROJECT_DIR$/web/src/main/resources/META-INF/persistence.xml" />
+        <option value="$PROJECT_DIR$/web/src/main/resources/ehcache.xml" />
+        <option value="$PROJECT_DIR$/web/src/main/resources/log4j.xml" />
+        <option value="$PROJECT_DIR$/web/src/main/resources/applicationContext-resources.xml" />
+        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/web/src/main/webapp/common/taglibs.jsp" />
       </list>
     </option>
   </component>
@@ -348,6 +447,13 @@
     <option name="AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="SPLITTER_PROPORTION" value="0.5" />
     <profile name="Default" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
   </component>
   <component name="LvcsProjectConfiguration">
     <option name="ADD_LABEL_ON_PROJECT_OPEN" value="true" />
@@ -386,9 +492,34 @@
     <option name="FILE_HISTORY_DIALOG_SPLITTER_PROPORTION" value="0.5" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="33" />
-    <option name="width" value="1366" />
-    <option name="height" value="737" />
+    <option name="y" value="29" />
+    <option name="width" value="1920" />
+    <option name="height" value="1051" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Google Web Toolkit issues</id>
+          </State>
+          <State>
+            <id>Security issues</id>
+          </State>
+          <State>
+            <id>Serialization issues</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>SerializableHasSerialVersionUIDField</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -409,32 +540,291 @@
       <showMembers />
       <showModules />
       <showLibraryContents />
-      <hideEmptyPackages />
+      <hideEmptyPackages ProjectPane="false" />
       <abbreviatePackageNames />
       <autoscrollToSource />
       <autoscrollFromSource />
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane />
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="free" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="free" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="free" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="free" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="org" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="translations" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="free" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="free" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="free" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="free" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="free" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="META-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="free" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="org" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="translations" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="util" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="free" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="org" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="translations" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -484,14 +874,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="impl" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -565,136 +947,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="free" />
+              <option name="myItemId" value="net" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="support" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="free" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="free" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
+              <option name="myItemId" value="abbreviations" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
           <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="free" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="free" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="impl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="free" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="free" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="domain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="free" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="free" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -710,18 +988,18 @@
     <view id="ClasspathPane" />
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="85" />
-    <property name="OverrideImplement.combined" value="true" />
-    <property name="project.structure.proportion" value="0.15" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="94" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="OverrideImplement.combined" value="true" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="recentsLimit" value="5" />
-    <property name="MemberChooser.sorted" value="false" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="85" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/core/target/test-classes/jdbc.properties" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/main/commons-fileupload-1.2.1.jar!/" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="100" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1009" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1009" />
@@ -735,33 +1013,37 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/core/src/test/java" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/core/src/test/java" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
-    <property name="options.lastSelected" value="se.expertsystem.intellij.aop.aspectj.AspectJProjectComponent" />
     <property name="download.sources.last.used.dir" value="$PROJECT_DIR$/.." />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="options.lastSelected" value="reference.projectsettings.compiler.excludes" />
+    <property name="project.structure.side.proportion" value="0.1635468" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="dynamic.classpath" value="false" />
     <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="org.translations.free.service.impl" />
-      <recent name="org.translations.free.domain" />
+      <recent name="net.abbreviations.core.service" />
+      <recent name="net.abbreviations.core.service.impl" />
+      <recent name="net.abbreviations.core.dao.impl" />
+      <recent name="net.abbreviations.core.dao" />
+      <recent name="net.abbreviations.core.domain" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/core/src/test/resources" />
     </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="org.translations.free.service.impl" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/core/src/test/resources" />
+      <recent name="$PROJECT_DIR$/core/src/main/resources" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="org.translations.free.service.impl" />
     </key>
   </component>
   <component name="Regex">
@@ -775,71 +1057,7 @@
     <option name="referencePos" value="0" />
     <option name="showLabels" value="true" />
   </component>
-  <component name="RunManager" selected="TestNG.UserServiceTest">
-    <configuration default="false" name="UserServiceTest" type="TestNG" factoryName="TestNG" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="org.translations.free.service.impl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="core" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" value="" />
-      <option name="SUITE_NAME" value="" />
-      <option name="PACKAGE_NAME" value="org.translations.free.service.impl" />
-      <option name="MAIN_CLASS_NAME" value="org.translations.free.service.impl.UserServiceTest" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" value="" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="OUTPUT_DIRECTORY" value="" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" value="" />
-      <envs />
-      <properties />
-      <listeners />
-      <RunnerSettings RunnerId="Cover" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="48751" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Cover" />
-      <ConfigurationWrapper RunnerId="Debug" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method>
-        <option name="BuildArtifacts" enabled="false">
-          <artifact name="resources" />
-        </option>
-      </method>
-    </configuration>
-    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
-      <module name="" />
-      <option name="TESTING_TYPE" value="0" />
-      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="COMMAND_LINE" value="" />
-      <option name="WIPE_USER_DATA" value="false" />
-      <option name="DISABLE_BOOT_ANIMATION" value="false" />
-      <option name="NETWORK_SPEED" value="full" />
-      <option name="NETWORK_LATENCY" value="none" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Tomcat Server.Tomcat 5.x">
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -852,17 +1070,17 @@
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" value="" />
-      <option name="SUITE_NAME" value="" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
       <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" />
       <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" value="" />
+      <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
       <option name="ANNOTATION_TYPE" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
@@ -870,15 +1088,11 @@
         <value defaultName="moduleWithDependencies" />
       </option>
       <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" value="" />
+      <option name="PROPERTIES_FILE" />
       <envs />
       <properties />
       <listeners />
-      <method>
-        <option name="BuildArtifacts" enabled="true">
-          <artifact name="resources" />
-        </option>
-      </method>
+      <method />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <module name="" />
@@ -929,14 +1143,131 @@
       <patterns />
       <method />
     </configuration>
-    <list size="1">
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local">
+      <deployment />
+      <server-settings />
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <method />
+    </configuration>
+    <configuration default="false" name="UserServiceTest" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="net.abbreviations.core.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="core" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="net.abbreviations.core.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="net.abbreviations.core.service.impl.UserServiceTest" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" value="" />
+      <envs />
+      <properties />
+      <listeners />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="52964" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <ConfigurationWrapper RunnerId="Debug" />
+      <method>
+        <option name="BuildArtifacts" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="false" name="Tomcat 5.x" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 5.x">
+      <option name="OPEN_IN_BROWSER" value="false" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="web">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_free" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <RunnerSettings RunnerId="Cover" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="56244" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method>
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="web" />
+        </option>
+      </method>
+    </configuration>
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="TestNG.UserServiceTest" />
+      <item index="1" class="java.lang.String" itemvalue="Tomcat Server.Tomcat 5.x" />
     </list>
-    <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="TestNG.UserServiceTest" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="StarteamConfiguration">
@@ -967,7 +1298,7 @@
     <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
     <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
     <option name="FORCE_UPDATE" value="false" />
-    <option name="IGNORE_EXTERNALS" value="false" />
+    <configuration useDefault="true">$USER_HOME$/.subversion_IDEA</configuration>
     <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
   </component>
   <component name="TaskManager">
@@ -996,36 +1327,36 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="33" width="1366" height="737" extended-state="0" />
+    <frame x="0" y="29" width="1920" height="1051" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.6661017" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24810319" sideWeight="0.21864407" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32964602" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.62711865" sideWeight="0.4969651" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29977876" sideWeight="0.7083333" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3338983" sideWeight="0.5007587" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.50884956" sideWeight="0.28792736" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32881355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3550885" sideWeight="0.5747863" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24810319" sideWeight="0.6661017" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32964602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24465811" sideWeight="0.70022124" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5084746" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Aspects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296582" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5" sideWeight="0.4939302" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Analysis" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="EJB" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="CVS" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1150,108 +1481,128 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/lib/main/hibernate-entitymanager-3.4.0.GA.jar!/org/hibernate/ejb/AbstractEntityManagerImpl.class">
+    <entry file="file://$PROJECT_DIR$/web/src/main/resources/velocity.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="68" selection-start="3674" selection-end="3674" vertical-scroll-proportion="0.7614314" />
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/main/hibernate-jpa-2.0-api-1.0.0.Final.jar!/javax/persistence/EntityManagerFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="22" selection-start="474" selection-end="474" vertical-scroll-proportion="0.4360465" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/test/resources/test-applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="58" selection-start="1492" selection-end="1492" vertical-scroll-proportion="0.71022725">
+        <state line="4" column="67" selection-start="246" selection-end="246" vertical-scroll-proportion="0.06841505">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/main/spring-tx-3.2.1.RELEASE.jar!/org/springframework/transaction/annotation/Transactional.class">
+    <entry file="file://$PROJECT_DIR$/web/src/main/java/org/translations/webapp/controller/BaseFormController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="18" selection-start="444" selection-end="444" vertical-scroll-proportion="0.26838967" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/test/resources/jdbc.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="10" selection-start="452" selection-end="452" vertical-scroll-proportion="0.3463588">
+        <state line="93" column="40" selection-start="3326" selection-end="3326" vertical-scroll-proportion="0.73546183">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/org/translations/free/dao/impl/BaseDAOImpl.java">
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/403.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="28" selection-start="637" selection-end="637" vertical-scroll-proportion="0.5204263">
+        <state line="19" column="20" selection-start="715" selection-end="715" vertical-scroll-proportion="0.7251908">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/org/translations/free/service/impl/BaseServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/web/src/test/resources/hibernate.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="97" selection-start="487" selection-end="487" vertical-scroll-proportion="0.13934426">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/web/src/test/resources/jdbc.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="282" column="31" selection-start="11487" selection-end="11487" vertical-scroll-proportion="0.4674221">
+        <state line="11" column="30" selection-start="385" selection-end="385" vertical-scroll-proportion="0.39568347">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/main/validation-api-1.0.0.GA.jar!/javax/validation/constraints/NotNull.class">
+    <entry file="file://$PROJECT_DIR$/web/src/main/resources/log4j.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="21" selection-start="542" selection-end="542" vertical-scroll-proportion="-4.08">
+        <state line="29" column="29" selection-start="902" selection-end="902" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1363708289740" expanded="true" signature="456:501" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/main/spring-web-3.2.1.RELEASE.jar!/org/springframework/web/filter/CharacterEncodingFilter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="13" selection-start="173" selection-end="173" vertical-scroll-proportion="0.19788918">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/org/translations/free/domain/UserRole.java">
+    <entry file="jar://$PROJECT_DIR$/lib/main/spring-web-3.2.1.RELEASE.jar!/org/springframework/web/context/ContextLoaderListener.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="26" selection-start="1994" selection-end="1994" vertical-scroll-proportion="0.0">
+        <state line="6" column="13" selection-start="174" selection-end="174" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/org/translations/free/domain/TranslationStatus.java">
+    <entry file="jar://$PROJECT_DIR$/../spring-web-3.2.1.RELEASE-sources.jar!/org/springframework/web/context/ContextLoaderListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="12" selection-start="51" selection-end="51" vertical-scroll-proportion="0.0">
+        <state line="40" column="13" selection-start="1647" selection-end="1647" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/org/translations/free/domain/TranslatableText.java">
+    <entry file="jar://$PROJECT_DIR$/lib/main/spring-webmvc-3.2.1.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="0" selection-start="1306" selection-end="1306" vertical-scroll-proportion="0.0">
+        <state line="6" column="13" selection-start="174" selection-end="174" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/org/translations/free/domain/Translation.java">
+    <entry file="jar://$PROJECT_DIR$/../spring-webmvc-3.2.1.RELEASE-sources.jar!/org/springframework/web/servlet/DispatcherServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="0" selection-start="2398" selection-end="2398" vertical-scroll-proportion="0.0">
+        <state line="885" column="39" selection-start="40287" selection-end="40287" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/org/translations/free/domain/User.java">
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/web.xml">
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="12" selection-start="2232" selection-end="2232" vertical-scroll-proportion="0.0">
+        <state line="36" column="0" selection-start="1220" selection-end="1220" vertical-scroll-proportion="-7.576923">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="32" selection-start="72" selection-end="72" vertical-scroll-proportion="-1.875">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/test/java/org/translations/free/service/impl/UserServiceTest.java">
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/pages/mainMenu.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="26" selection-start="593" selection-end="593" vertical-scroll-proportion="0.0">
+        <state line="0" column="32" selection-start="32" selection-end="32" vertical-scroll-proportion="-0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/pom.xml">
+    <entry file="file://$PROJECT_DIR$/web/src/main/resources/ApplicationResources.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="34" selection-start="1861" selection-end="1861" vertical-scroll-proportion="0.38081396">
+        <state line="12" column="45" selection-start="440" selection-end="440" vertical-scroll-proportion="0.31746033">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="ResourceBundle">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/common/taglibs.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="38" selection-start="843" selection-end="843" vertical-scroll-proportion="0.30927834">
           <folding />
         </state>
       </provider>
@@ -1263,17 +1614,17 @@
         <settings>
           <artifact-editor>
             <show-content>
-              <type id="jpa-descriptors" />
               <type id="artifact" />
               <type id="javaee-facet-resources" />
               <type id="library" />
+              <type id="jpa-descriptors" />
             </show-content>
           </artifact-editor>
-          <last-edited>resources</last-edited>
+          <last-edited>web</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.1635468" />
                 <option value="0.5" />
               </list>
             </option>
@@ -1282,11 +1633,11 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>AspectJ</last-edited>
+          <last-edited>Web (web)|Web</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.1635468" />
               </list>
             </option>
           </splitter-proportions>
@@ -1305,7 +1656,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.7</last-edited>
+          <last-edited>1.6</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1317,11 +1668,11 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>JPA|core</last-edited>
+          <last-edited>Web|web</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.1635468" />
               </list>
             </option>
           </splitter-proportions>
@@ -1329,7 +1680,7 @@
       </state>
       <state key="ProjectJDKs.UI">
         <settings>
-          <last-edited>1.7</last-edited>
+          <last-edited>1.6</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1345,7 +1696,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.1635468" />
               </list>
             </option>
           </splitter-proportions>
@@ -1354,19 +1705,19 @@
     </states>
   </component>
   <component name="se.expertsystem.intellij.aop.aspectj.AspectJProjectComponent">
-    <setting name="isActivated" value="true" />
-    <aspect className="org.aspectj.ajdt.internal.compiler.CompilerAdapter" enabled="true">jar://file:/pro/free-translations/lib/main/aspectjtools-1.7.1.jar!/org/aspectj/ajdt/internal/compiler/CompilerAdapter.class</aspect>
-    <aspect className="org.aspectj.ajdt.internal.compiler.lookup.AnonymousClassPublisher" enabled="true">jar://file:/pro/free-translations/lib/main/aspectjtools-1.7.1.jar!/org/aspectj/ajdt/internal/compiler/lookup/AnonymousClassPublisher.class</aspect>
-    <aspect className="org.aspectj.ajdt.internal.compiler.lookup.OwningClassSupportForFieldBindings" enabled="true">jar://file:/pro/free-translations/lib/main/aspectjtools-1.7.1.jar!/org/aspectj/ajdt/internal/compiler/lookup/OwningClassSupportForFieldBindings.class</aspect>
-    <aspect className="org.aspectj.ajdt.internal.compiler.lookup.OwningClassSupportForMethodBindings" enabled="true">jar://file:/pro/free-translations/lib/main/aspectjtools-1.7.1.jar!/org/aspectj/ajdt/internal/compiler/lookup/OwningClassSupportForMethodBindings.class</aspect>
-    <aspect className="org.aspectj.ajdt.internal.compiler.lookup.WarnOnSwallowedException" enabled="true">jar://file:/pro/free-translations/lib/main/aspectjtools-1.7.1.jar!/org/aspectj/ajdt/internal/compiler/lookup/WarnOnSwallowedException.class</aspect>
-    <aspect className="org.aspectj.ajdt.internal.compiler.parser.AllowAssertAndEnumAsIdentifierTokensInPointcutExpressions" enabled="true">jar://file:/pro/free-translations/lib/main/aspectjtools-1.7.1.jar!/org/aspectj/ajdt/internal/compiler/parser/AllowAssertAndEnumAsIdentifierTokensInPointcutExpressions.class</aspect>
-    <aspect className="org.springframework.beans.factory.aspectj.AnnotationBeanConfigurerAspect" enabled="true">jar://file:/pro/free-translations/lib/main/spring-aspects-3.2.1.RELEASE.jar!/org/springframework/beans/factory/aspectj/AnnotationBeanConfigurerAspect.class</aspect>
-    <aspect className="org.springframework.cache.aspectj.AnnotationCacheAspect" enabled="true">jar://file:/pro/free-translations/lib/main/spring-aspects-3.2.1.RELEASE.jar!/org/springframework/cache/aspectj/AnnotationCacheAspect.class</aspect>
-    <aspect className="org.springframework.mock.staticmock.AnnotationDrivenStaticEntityMockingControl" enabled="true">jar://file:/pro/free-translations/lib/main/spring-aspects-3.2.1.RELEASE.jar!/org/springframework/mock/staticmock/AnnotationDrivenStaticEntityMockingControl.class</aspect>
-    <aspect className="org.springframework.orm.jpa.aspectj.JpaExceptionTranslatorAspect" enabled="true">jar://file:/pro/free-translations/lib/main/spring-aspects-3.2.1.RELEASE.jar!/org/springframework/orm/jpa/aspectj/JpaExceptionTranslatorAspect.class</aspect>
-    <aspect className="org.springframework.scheduling.aspectj.AnnotationAsyncExecutionAspect" enabled="true">jar://file:/pro/free-translations/lib/main/spring-aspects-3.2.1.RELEASE.jar!/org/springframework/scheduling/aspectj/AnnotationAsyncExecutionAspect.class</aspect>
-    <aspect className="org.springframework.transaction.aspectj.AnnotationTransactionAspect" enabled="true">jar://file:/pro/free-translations/lib/main/spring-aspects-3.2.1.RELEASE.jar!/org/springframework/transaction/aspectj/AnnotationTransactionAspect.class</aspect>
+    <setting name="isActivated" value="false" />
+    <aspect className="org.aspectj.ajdt.internal.compiler.CompilerAdapter" enabled="true">jar://file:/pro/src/free/lib/main/aspectjtools-1.6.9.jar!/org/aspectj/ajdt/internal/compiler/CompilerAdapter.class</aspect>
+    <aspect className="org.aspectj.ajdt.internal.compiler.lookup.AnonymousClassPublisher" enabled="true">jar://file:/pro/src/free/lib/main/aspectjtools-1.6.9.jar!/org/aspectj/ajdt/internal/compiler/lookup/AnonymousClassPublisher.class</aspect>
+    <aspect className="org.aspectj.ajdt.internal.compiler.lookup.OwningClassSupportForFieldBindings" enabled="true">jar://file:/pro/src/free/lib/main/aspectjtools-1.6.9.jar!/org/aspectj/ajdt/internal/compiler/lookup/OwningClassSupportForFieldBindings.class</aspect>
+    <aspect className="org.aspectj.ajdt.internal.compiler.lookup.OwningClassSupportForMethodBindings" enabled="true">jar://file:/pro/src/free/lib/main/aspectjtools-1.6.9.jar!/org/aspectj/ajdt/internal/compiler/lookup/OwningClassSupportForMethodBindings.class</aspect>
+    <aspect className="org.aspectj.ajdt.internal.compiler.lookup.WarnOnSwallowedException" enabled="true">jar://file:/pro/src/free/lib/main/aspectjtools-1.6.9.jar!/org/aspectj/ajdt/internal/compiler/lookup/WarnOnSwallowedException.class</aspect>
+    <aspect className="org.aspectj.ajdt.internal.compiler.parser.AllowAssertAndEnumAsIdentifierTokensInPointcutExpressions" enabled="true">jar://file:/pro/src/free/lib/main/aspectjtools-1.6.9.jar!/org/aspectj/ajdt/internal/compiler/parser/AllowAssertAndEnumAsIdentifierTokensInPointcutExpressions.class</aspect>
+    <aspect className="org.springframework.beans.factory.aspectj.AnnotationBeanConfigurerAspect" enabled="true">jar://file:/pro/src/free/lib/main/spring-aspects-3.2.1.RELEASE.jar!/org/springframework/beans/factory/aspectj/AnnotationBeanConfigurerAspect.class</aspect>
+    <aspect className="org.springframework.cache.aspectj.AnnotationCacheAspect" enabled="true">jar://file:/pro/src/free/lib/main/spring-aspects-3.2.1.RELEASE.jar!/org/springframework/cache/aspectj/AnnotationCacheAspect.class</aspect>
+    <aspect className="org.springframework.mock.staticmock.AnnotationDrivenStaticEntityMockingControl" enabled="true">jar://file:/pro/src/free/lib/main/spring-aspects-3.2.1.RELEASE.jar!/org/springframework/mock/staticmock/AnnotationDrivenStaticEntityMockingControl.class</aspect>
+    <aspect className="org.springframework.orm.jpa.aspectj.JpaExceptionTranslatorAspect" enabled="true">jar://file:/pro/src/free/lib/main/spring-aspects-3.2.1.RELEASE.jar!/org/springframework/orm/jpa/aspectj/JpaExceptionTranslatorAspect.class</aspect>
+    <aspect className="org.springframework.scheduling.aspectj.AnnotationAsyncExecutionAspect" enabled="true">jar://file:/pro/src/free/lib/main/spring-aspects-3.2.1.RELEASE.jar!/org/springframework/scheduling/aspectj/AnnotationAsyncExecutionAspect.class</aspect>
+    <aspect className="org.springframework.transaction.aspectj.AnnotationTransactionAspect" enabled="true">jar://file:/pro/src/free/lib/main/spring-aspects-3.2.1.RELEASE.jar!/org/springframework/transaction/aspectj/AnnotationTransactionAspect.class</aspect>
   </component>
 </project>
 

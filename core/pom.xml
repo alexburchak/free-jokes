@@ -55,7 +55,7 @@
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-entitymanager</artifactId>
-            <version>${hibernate.entitymanager.version}</version>
+            <version>${hibernate.version}</version>
         </dependency>
         <dependency>
             <groupId>org.hibernate</groupId>
@@ -141,6 +141,39 @@
                             <artifactId>spring-aspects</artifactId>
                         </aspectLibrary>
                     </aspectLibraries>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.activemq.tooling</groupId>
+                <artifactId>maven-activemq-plugin</artifactId>
+                <version>${activemq.version}</version>
+                <executions>
+                    <execution>
+                        <id>start-activemq</id>
+                        <phase>process-test-classes</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <configUri>xbean:file://${project.basedir}/src/test/resources/activemq.xml</configUri>
+                    <!-- Start up the broker in a separate thread, enabling maven to continue processing -->
+                    <fork>true</fork>
+                    <systemProperties>
+                        <property>
+                            <name>javax.net.ssl.keyStorePassword</name>
+                            <value>password</value>
+                        </property>
+                        <property>
+                            <name>org.apache.activemq.default.directory.prefix</name>
+                            <value>./target/</value>
+                        </property>
+                        <property>
+                            <name>log4j.configuration</name>
+                            <value>file://${project.basedir}/src/test/resources/log4j-activemq.xml</value>
+                        </property>
+                    </systemProperties>
                 </configuration>
             </plugin>
         </plugins>

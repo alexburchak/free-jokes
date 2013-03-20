@@ -18,11 +18,10 @@ import javax.servlet.http.HttpServletRequest;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
-import java.util.Map;
-import org.translations.free.service.UserService;
+
+import net.abbreviations.core.service.UserService;
 
 /**
  * Implementation of <strong>SimpleFormController</strong> that contains
