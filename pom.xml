@@ -4,12 +4,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>org.translations</groupId>
-    <artifactId>free</artifactId>
+    <groupId>net.abbreviations</groupId>
+    <artifactId>root</artifactId>
+
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
-    <name>Free Translations</name>
-    <url>http://free-translations.org</url>
+    <name>net.abbreviations</name>
+    <url>http://abbreviations.net</url>
 
     <prerequisites>
         <maven>3.0.4</maven>
@@ -20,27 +21,36 @@
         <module>web</module>
     </modules>
 
+    <scm>
+        <connection>scm:git:git://github.com/alexburchak/net.abbreviations.git</connection>
+        <url>https://github.com/alexburchak/net.abbreviations</url>
+    </scm>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <copyright.year>2013</copyright.year>
 
         <webtest.target>run-all-tests</webtest.target>
-        <target.jdk>1.7</target.jdk>
+        <target.jdk>1.6</target.jdk>
 
-        <db.name>free</db.name>
+        <db.name>abbreviations</db.name>
         <dao.framework>hibernate</dao.framework>
-        <hibernate.dialect>org.hibernate.dialect.MySQL5InnoDBDialect</hibernate.dialect>
-        <hibernate.showSql>true</hibernate.showSql>
+
         <hibernate.version>3.5.6-Final</hibernate.version>
         <hibernate.validator.version>4.3.1.Final</hibernate.validator.version>
+        <!-- Accumulate data on test phases, until cleaned up -->
+        <hibernate.create>true</hibernate.create>
+        <hibernate.drop>false</hibernate.drop>
+        <hibernate.showSql>false</hibernate.showSql>
 
-        <jdbc.groupId>mysql</jdbc.groupId>
-        <jdbc.artifactId>mysql-connector-java</jdbc.artifactId>
-        <jdbc.version>5.1.22</jdbc.version>
-        <jdbc.driverClassName>com.mysql.jdbc.Driver</jdbc.driverClassName>
-        <jdbc.url>jdbc:mysql://localhost/${db.name}?createDatabaseIfNotExist=true&amp;amp;useUnicode=true&amp;amp;characterEncoding=utf-8&amp;amp;autoReconnect=true</jdbc.url>
-        <jdbc.username>root</jdbc.username>
-        <jdbc.password>root</jdbc.password>
+        <hibernate.dialect>org.hibernate.dialect.HSQLDialect</hibernate.dialect>
+        <jdbc.groupId>org.hsqldb</jdbc.groupId>
+        <jdbc.artifactId>hsqldb</jdbc.artifactId>
+        <jdbc.version>2.2.9</jdbc.version>
+        <jdbc.driverClassName>org.hsqldb.jdbcDriver</jdbc.driverClassName>
+        <jdbc.url>jdbc:hsqldb:${basedir}/target/localdb/${db.name};shutdown=true</jdbc.url>
+        <jdbc.username>sa</jdbc.username>
+        <jdbc.password></jdbc.password>
 
         <ehcache.version>2.6.3</ehcache.version>
 
@@ -67,6 +77,8 @@
         <amp.genericCore>true</amp.genericCore>
         <amp.fullSource>false</amp.fullSource>
 
+        <maven.test.jvmargs>-Xmx256m</maven.test.jvmargs>
+        <surefire.version>2.9</surefire.version>
         <mockito.version>1.9.5</mockito.version>
         <testng.version>6.8</testng.version>
 
@@ -186,7 +198,58 @@
     <build>
         <defaultGoal>install</defaultGoal>
 
-        <plugins/>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+
+        <testResources>
+            <testResource>
+                <directory>src/test/resources</directory>
+                <filtering>true</filtering>
+            </testResource>
+        </testResources>
+
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>buildnumber-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>create</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>1.6</version>
+                <executions>
+                    <execution>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <target>
+                                <!-- The buildNumber plugin doesn't play nice with git, so the "scmBranch" property always ends up as "UNKNOWN". The script below is a work around -->
+                                <exec executable="git" failonerror="true" outputproperty="buildScmBranch">
+                                    <arg value="name-rev" />
+                                    <arg value="--name-only" />
+                                    <arg value="HEAD" />
+                                </exec>
+                                <echo file="${basedir}/target/MANIFEST.MF">Implementation-Branch: ${buildScmBranch}${line.separator}</echo>
+                            </target>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
 
         <pluginManagement>
             <plugins>
@@ -248,82 +311,103 @@
                         </aspectLibraries>
                     </configuration>
                 </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>2.1</version>
+                    <configuration>
+                        <source>${target.jdk}</source>
+                        <target>${target.jdk}</target>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>2.4</version>
+                    <configuration>
+                        <archive>
+                            <manifestFile>target/MANIFEST.MF</manifestFile>
+                            <manifest>
+                                <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+                            </manifest>
+                            <manifestEntries>
+                                <Implementation-Build>${buildNumber}</Implementation-Build>
+                            </manifestEntries>
+                        </archive>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <version>2.3</version>
+                    <configuration>
+                        <filteringDeploymentDescriptors>true</filteringDeploymentDescriptors>
+                        <archive>
+                            <manifestFile>target/MANIFEST.MF</manifestFile>
+                            <manifest>
+                                <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+                            </manifest>
+                            <manifestEntries>
+                                <Implementation-Build>${buildNumber}</Implementation-Build>
+                            </manifestEntries>
+                        </archive>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>buildnumber-maven-plugin</artifactId>
+                    <version>1.0</version>
+                    <configuration>
+                        <doCheck>true</doCheck>
+                        <doUpdate>false</doUpdate>
+                        <getRevisionOnlyOnce>true</getRevisionOnlyOnce>
+                        <locale>en</locale>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>${surefire.version}</version>
+                    <configuration>
+                        <skip>true</skip>
+                        <runOrder>alphabetical</runOrder>
+                        <argLine>${maven.test.jvmargs}</argLine>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <id>surefire-test</id>
+                            <phase>test</phase>
+                            <goals>
+                                <goal>test</goal>
+                            </goals>
+                            <configuration>
+                                <skip>false</skip>
+                                <excludes>
+                                    <exclude>**/itest/**</exclude>
+                                    <exclude>**/*$*.class</exclude>
+                                </excludes>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
             </plugins>
         </pluginManagement>
     </build>
 
-    <reporting>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>2.1</version>
-                <configuration>
-                    <source>${target.jdk}</source>
-                    <target>${target.jdk}</target>
-                </configuration>
-            </plugin>
-            <plugin>
-                <artifactId>maven-changes-plugin</artifactId>
-                <version>2.8</version>
-            </plugin>
-            <plugin>
-                <artifactId>maven-checkstyle-plugin</artifactId>
-                <configuration>
-                    <consoleOutput>true</consoleOutput>
-                    <configLocation>https://raw.github.com/appfuse/appfuse/master/www/checkstyle.xml</configLocation>
-                    <failsOnError>false</failsOnError>
-                    <maxAllowedViolations>3</maxAllowedViolations>
-                </configuration>
-                <version>2.9.1</version>
-            </plugin>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>cobertura-maven-plugin</artifactId>
-                <version>2.5.2</version>
-                <configuration>
-                    <instrumentation>
-                        <excludes>
-                            <exclude>**/model/*.class</exclude>
-                        </excludes>
-                    </instrumentation>
-                    <check>true</check>
-                </configuration>
-            </plugin>
-            <plugin>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <version>2.9</version>
-            </plugin>
-            <plugin>
-                <artifactId>maven-jxr-plugin</artifactId>
-                <version>2.3</version>
-            </plugin>
-            <plugin>
-                <artifactId>maven-pmd-plugin</artifactId>
-                <configuration>
-                    <linkXRef>true</linkXRef>
-                    <targetJdk>${target.jdk}</targetJdk>
-                </configuration>
-                <version>2.7.1</version>
-            </plugin>
-            <plugin>
-                <artifactId>maven-surefire-report-plugin</artifactId>
-                <version>2.12.4</version>
-            </plugin>
-        </plugins>
-    </reporting>
-
     <profiles>
         <profile>
-            <id>hsqldb</id>
+            <id>mysql</id>
             <properties>
-                <hibernate.dialect>org.hibernate.dialect.HSQLDialect</hibernate.dialect>
-                <jdbc.groupId>org.hsqldb</jdbc.groupId>
-                <jdbc.artifactId>hsqldb</jdbc.artifactId>
-                <jdbc.version>2.2.9</jdbc.version>
-                <jdbc.driverClassName>org.hsqldb.jdbcDriver</jdbc.driverClassName>
-                <jdbc.url>jdbc:hsqldb:/tmp/${db.name};shutdown=true</jdbc.url>
-                <jdbc.username>sa</jdbc.username>
+                <hibernate.dialect>org.hibernate.dialect.MySQL5InnoDBDialect</hibernate.dialect>
+                <hibernate.create>true</hibernate.create>
+                <hibernate.drop>false</hibernate.drop>
+                <jdbc.groupId>mysql</jdbc.groupId>
+                <jdbc.artifactId>mysql-connector-java</jdbc.artifactId>
+                <jdbc.version>5.1.22</jdbc.version>
+                <jdbc.driverClassName>com.mysql.jdbc.Driver</jdbc.driverClassName>
+                <jdbc.url>jdbc:mysql://localhost/${db.name}?createDatabaseIfNotExist=true&amp;amp;useUnicode=true&amp;amp;characterEncoding=utf-8&amp;amp;autoReconnect=true</jdbc.url>
+                <jdbc.username>root</jdbc.username>
+                <jdbc.password>root</jdbc.password>
             </properties>
         </profile>
 
@@ -334,6 +418,32 @@
                 <cargo.container.home>${env.JBOSS_HOME}</cargo.container.home>
                 <cargo.container.url>http://easynews.dl.sourceforge.net/sourceforge/jboss/jboss-4.0.5.GA.zip</cargo.container.url>
             </properties>
+        </profile>
+
+        <profile>
+            <id>prod</id>
+            <properties>
+                <skipTests>true</skipTests>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>dev</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>buildnumber-maven-plugin</artifactId>
+                        <configuration>
+                            <!-- Ignore local modifications -->
+                            <doCheck>false</doCheck>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
         </profile>
     </profiles>
 </project>

@@ -4,21 +4,21 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.translations</groupId>
-        <artifactId>free</artifactId>
+        <groupId>net.abbreviations</groupId>
+        <artifactId>root</artifactId>
         <version>1.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>free-web</artifactId>
+    <artifactId>web</artifactId>
     <packaging>war</packaging>
-    <name>Free Translations Web</name>
+    <name>net.abbreviations web</name>
 
     <dependencies>
         <dependency>
             <groupId>${project.parent.groupId}</groupId>
-            <artifactId>free-core</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <artifactId>core</artifactId>
+            <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>displaytag</groupId>
@@ -70,95 +70,12 @@
     </dependencies>
 
     <build>
-        <plugins>
-            <plugin>
-                <groupId>org.mortbay.jetty</groupId>
-                <artifactId>jetty-maven-plugin</artifactId>
-                <version>8.1.3.v20120416</version>
-                <configuration>
-                    <webApp>
-                        <contextPath>/</contextPath>
-                    </webApp>
-                </configuration>
-            </plugin>
-            <!-- clean-up previous hibernate-search indexed from integration tests, as there could be a lock -->
-            <plugin>
-                <artifactId>maven-clean-plugin</artifactId>
-                <version>2.5</version>
-                <configuration>
-                    <filesets>
-                        <fileset>
-                            <directory>${user.home}/${project.build.finalName}/index</directory>
-                        </fileset>
-                    </filesets>
-                </configuration>
-            </plugin>
-            <!-- will package a ready-to-run app regarding hibernate-search index location -->
-            <plugin>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>2.3</version>
-                <configuration>
-                    <escapeString>\</escapeString>
-                    <archive>
-                        <manifest>
-                            <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
-                        </manifest>
-                        <manifestEntries>
-                            <Implementation-Build>${buildNumber}</Implementation-Build>
-                        </manifestEntries>
-                    </archive>
-                    <webResources>
-                        <resource>
-                            <directory>src/main/resources/packaged</directory>
-                            <targetPath>WEB-INF/classes</targetPath>
-                            <filtering>true</filtering>
-                            <includes>
-                                <include>hibernate.properties</include>
-                            </includes>
-                        </resource>
-                    </webResources>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>native2ascii-maven-plugin</artifactId>
-                <version>1.0-beta-1</version>
-                <executions>
-                    <execution>
-                        <id>native2ascii-utf8</id>
-                        <goals>
-                            <goal>native2ascii</goal>
-                        </goals>
-                        <configuration>
-                            <encoding>UTF8</encoding>
-                            <includes>
-                                <include>applicationResources_*.properties</include>
-                                <include>displaytag_*.properties</include>
-                            </includes>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
                 <filtering>true</filtering>
             </resource>
         </resources>
-        <testResources>
-            <testResource>
-                <directory>src/test/resources</directory>
-                <filtering>true</filtering>
-            </testResource>
-            <testResource>
-                <directory>src/main/webapp</directory>
-                <filtering>true</filtering>
-                <includes>
-                    <include>**/*.xml</include>
-                </includes>
-            </testResource>
-        </testResources>
     </build>
 
     <profiles>
@@ -219,13 +136,6 @@
                         </executions>
                     </plugin>
                 </plugins>
-            </build>
-        </profile>
-
-        <profile>
-            <id>prod</id>
-            <build>
-                <plugins/>
             </build>
         </profile>
     </profiles>

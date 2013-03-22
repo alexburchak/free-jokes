@@ -17,7 +17,7 @@ import org.apache.commons.lang.StringUtils;
 import org.hibernate.annotations.ForeignKey;
 
 @Entity
-@Table(name = "user_role", uniqueConstraints = {@UniqueConstraint(name = "user_role_uk", columnNames = {"user", "role"})})
+@Table(name = "user_role")
 public class UserRole
 {
     @Embeddable

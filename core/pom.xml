@@ -6,15 +6,15 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.translations</groupId>
-        <artifactId>free</artifactId>
+        <groupId>net.abbreviations</groupId>
+        <artifactId>root</artifactId>
         <version>1.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>free-core</artifactId>
+    <artifactId>core</artifactId>
     <packaging>jar</packaging>
-    <name>Free Translations Core</name>
+    <name>net.abbreviations core</name>
 
     <dependencies>
         <dependency>
@@ -105,13 +105,13 @@
                     </components>
                     <componentProperties>
                         <persistenceunit>persistenceUnit</persistenceunit>
-                        <propertyfile>${project.build.testOutputDirectory}/jdbc.properties</propertyfile>
+                        <propertyfile>target/test-classes/jdbc.properties</propertyfile>
                         <jdk5>true</jdk5>
                         <outputfilename>schema.sql</outputfilename>
                         <skip>${skipTests}</skip>
-                        <drop>false</drop>
-                        <create>false</create>
-                        <export>false</export>
+                        <drop>${hibernate.drop}</drop>
+                        <create>${hibernate.create}</create>
+                        <export>${hibernate.create}</export>
                         <format>true</format>
                     </componentProperties>
                 </configuration>
@@ -177,12 +177,5 @@
                 </configuration>
             </plugin>
         </plugins>
-
-        <testResources>
-            <testResource>
-                <directory>src/test/resources</directory>
-                <filtering>true</filtering>
-            </testResource>
-        </testResources>
     </build>
 </project>
