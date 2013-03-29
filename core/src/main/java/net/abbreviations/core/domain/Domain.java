@@ -5,8 +5,7 @@ import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "domain")
-public class Domain
-{
+public class Domain {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false, updatable = false)
@@ -16,8 +15,7 @@ public class Domain
     @NotNull
     private String name;
 
-    public long getId()
-    {
+    public long getId() {
         return id;
     }
 
@@ -30,8 +28,7 @@ public class Domain
     }
 
     @Override
-    public String toString()
-    {
+    public String toString() {
         return name;
     }
 }

@@ -13,8 +13,7 @@ public class DescriptionServiceImpl extends BaseServiceImpl<Long, Description> i
     private DescriptionDAO descriptionDAO;
 
     @Override
-    protected BaseDAO<Long, Description> getDAO()
-    {
+    protected BaseDAO<Long, Description> getDAO() {
         return descriptionDAO;
     }
 }

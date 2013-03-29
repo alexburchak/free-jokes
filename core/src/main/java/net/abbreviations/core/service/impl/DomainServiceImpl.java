@@ -8,14 +8,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class DomainServiceImpl extends BaseServiceImpl<Long, Domain> implements DomainService
-{
+public class DomainServiceImpl extends BaseServiceImpl<Long, Domain> implements DomainService {
     @Autowired
     private DomainDAO domainDAO;
 
     @Override
-    protected BaseDAO<Long, Domain> getDAO()
-    {
+    protected BaseDAO<Long, Domain> getDAO() {
         return domainDAO;
     }
 }

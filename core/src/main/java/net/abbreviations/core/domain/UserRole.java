@@ -1,28 +1,17 @@
 package net.abbreviations.core.domain;
 
-import java.io.Serializable;
-import javax.persistence.Column;
-import javax.persistence.Embeddable;
-import javax.persistence.EmbeddedId;
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
-import javax.persistence.UniqueConstraint;
-import javax.validation.constraints.NotNull;
-
 import org.apache.commons.lang.StringUtils;
 import org.hibernate.annotations.ForeignKey;
 
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import java.io.Serializable;
+
 @Entity
 @Table(name = "user_role")
-public class UserRole
-{
+public class UserRole {
     @Embeddable
-    public static class Id implements Serializable
-    {
+    public static class Id implements Serializable {
         private static final long serialVersionUID = 5768652673847706713L;
 
         @ManyToOne(optional = false)
@@ -36,30 +25,26 @@ public class UserRole
         @NotNull
         private Role role;
 
-        public User getUser()
-        {
+        public User getUser() {
             return user;
         }
 
-        public Role getRole()
-        {
+        public Role getRole() {
             return role;
         }
 
         @Override
-        public int hashCode()
-        {
+        public int hashCode() {
             return getRole().hashCode();
         }
 
         @Override
-        public boolean equals(Object obj)
-        {
+        public boolean equals(Object obj) {
             if (obj == this)
                 return true;
             if (!(obj instanceof Id))
                 return false;
-            Id id = (Id)obj;
+            Id id = (Id) obj;
             return StringUtils.equals(getUser().getEmail(), id.getUser().getEmail())
                     && getRole() == id.getRole();
         }
@@ -73,8 +58,7 @@ public class UserRole
     @EmbeddedId
     private Id id;
 
-    public Id getId()
-    {
+    public Id getId() {
         return id;
     }
 

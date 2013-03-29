@@ -6,8 +6,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository("domainDAO")
 public class DomainDAOImpl extends BaseDAOImpl<Long, Domain> implements DomainDAO {
-    protected DomainDAOImpl()
-    {
+    protected DomainDAOImpl() {
         super(Domain.class);
     }
 }

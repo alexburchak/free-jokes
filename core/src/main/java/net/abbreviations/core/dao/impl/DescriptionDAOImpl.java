@@ -6,8 +6,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository("translationDAO")
 public class DescriptionDAOImpl extends BaseDAOImpl<Long, Description> implements DescriptionDAO {
-    protected DescriptionDAOImpl()
-    {
+    protected DescriptionDAOImpl() {
         super(Description.class);
     }
 }

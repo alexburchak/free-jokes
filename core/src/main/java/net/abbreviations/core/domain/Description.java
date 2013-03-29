@@ -8,8 +8,7 @@ import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "description")
-public class Description
-{
+public class Description {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false, updatable = false)
@@ -32,8 +31,7 @@ public class Description
     @NotNull
     private User submitter;
 
-    public long getId()
-    {
+    public long getId() {
         return id;
     }
 
@@ -62,8 +60,7 @@ public class Description
     }
 
     @Override
-    public String toString()
-    {
+    public String toString() {
         return text;
     }
 }

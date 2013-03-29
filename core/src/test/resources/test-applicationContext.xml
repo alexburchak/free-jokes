@@ -45,7 +45,7 @@
         <property name="persistenceUnitName" value="persistenceUnit"/>
         <property name="persistenceXmlLocation" value="classpath*:META-INF/persistence.xml"/>
         <property name="jpaVendorAdapter">
-            <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" />
+            <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter"/>
         </property>
         <property name="jpaProperties">
             <props>

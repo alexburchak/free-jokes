@@ -1,6 +1,7 @@
 package net.abbreviations.core.service.impl;
 
-import javax.validation.ConstraintViolationException;
+import net.abbreviations.core.domain.User;
+import net.abbreviations.core.service.UserService;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
@@ -9,20 +10,18 @@ import org.springframework.transaction.annotation.Transactional;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import net.abbreviations.core.domain.User;
-import net.abbreviations.core.service.UserService;
+
+import javax.validation.ConstraintViolationException;
 
 @ContextConfiguration(locations = {"classpath:/test-applicationContext.xml"})
-public class UserServiceTest extends AbstractTestNGSpringContextTests
-{
+public class UserServiceTest extends AbstractTestNGSpringContextTests {
     private long userId;
 
     @Autowired
     private UserService userService;
 
     @BeforeMethod
-    public void setUp()
-    {
+    public void setUp() {
         User user = new User();
         user.setEmail("lenny+" + System.currentTimeMillis() + "@kravitz.com");
         user.setPassword("password");
@@ -35,8 +34,7 @@ public class UserServiceTest extends AbstractTestNGSpringContextTests
      */
     @Test
     @Transactional
-    public void testPersistence()
-    {
+    public void testPersistence() {
         User user = userService.findById(userId);
         user.setPassword("");
         userService.save(user);
@@ -46,16 +44,12 @@ public class UserServiceTest extends AbstractTestNGSpringContextTests
      * Tests javax.validation applied to domain objects. Requires hibernate v3.5 or above
      */
     @Test
-    public void testValidation()
-    {
-        try
-        {
+    public void testValidation() {
+        try {
             updateUserPasswordHash(StringUtils.EMPTY);
             Assert.fail();
-        } catch (Exception e)
-        {
-            for (Throwable t = e; ; t = t.getCause())
-            {
+        } catch (Exception e) {
+            for (Throwable t = e; ; t = t.getCause()) {
                 if (t instanceof ConstraintViolationException)
                     break;
                 if (t == null || t.getCause() == t)
@@ -68,8 +62,7 @@ public class UserServiceTest extends AbstractTestNGSpringContextTests
      * A separate transaction which updates user password (hash)
      */
     @Transactional
-    private void updateUserPasswordHash(String passwordHash)
-    {
+    private void updateUserPasswordHash(String passwordHash) {
         User user = userService.findById(userId);
         user.setPasswordHash(passwordHash);
         userService.save(user);

@@ -1,7 +1,6 @@
 package net.abbreviations.core.domain;
 
-public enum Role
-{
+public enum Role {
     USER,
     ADMINISTRATOR
 }

@@ -6,8 +6,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository("translatableTextDAO")
 public class AbbreviationDAOImpl extends BaseDAOImpl<Long, Abbreviation> implements AbbreviationDAO {
-    protected AbbreviationDAOImpl()
-    {
+    protected AbbreviationDAOImpl() {
         super(Abbreviation.class);
     }
 }

@@ -8,8 +8,7 @@ import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "abbreviation", uniqueConstraints = {@UniqueConstraint(name = "abbreviation_text_domain_uk", columnNames = {"abbreviation_text", "domain"})})
-public class Abbreviation
-{
+public class Abbreviation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false, updatable = false)
@@ -37,18 +36,15 @@ public class Abbreviation
     @NotNull
     private User submitter;
 
-    public long getId()
-    {
+    public long getId() {
         return id;
     }
 
-    public Status getStatus()
-    {
+    public Status getStatus() {
         return status;
     }
 
-    public void setStatus(Status status)
-    {
+    public void setStatus(Status status) {
         this.status = status;
     }
 
@@ -77,8 +73,7 @@ public class Abbreviation
     }
 
     @Override
-    public String toString()
-    {
+    public String toString() {
         return text;
     }
 }

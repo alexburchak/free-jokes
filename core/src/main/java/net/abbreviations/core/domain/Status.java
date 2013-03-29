@@ -1,7 +1,6 @@
 package net.abbreviations.core.domain;
 
-public enum Status
-{
+public enum Status {
     NEW,
     APPROVED
 }
