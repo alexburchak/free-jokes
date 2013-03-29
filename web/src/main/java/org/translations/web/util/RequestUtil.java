@@ -1,4 +1,4 @@
-package org.translations.webapp.util;
+package org.translations.web.util;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -23,9 +23,9 @@ public final class RequestUtil {
      * Convenience method to set a cookie
      *
      * @param response the current response
-     * @param name the name of the cookie
-     * @param value the value of the cookie
-     * @param path the path to set it on
+     * @param name     the name of the cookie
+     * @param value    the value of the cookie
+     * @param path     the path to set it on
      */
     public static void setCookie(HttpServletResponse response, String name,
                                  String value, String path) {
@@ -45,8 +45,7 @@ public final class RequestUtil {
      * Convenience method to get a cookie by name
      *
      * @param request the current request
-     * @param name the name of the cookie to find
-     *
+     * @param name    the name of the cookie to find
      * @return the cookie (if found), null if not found
      */
     public static Cookie getCookie(HttpServletRequest request, String name) {
@@ -71,8 +70,8 @@ public final class RequestUtil {
      * Convenience method for deleting a cookie by name
      *
      * @param response the current web response
-     * @param cookie the cookie to delete
-     * @param path the path on which the cookie was set (i.e. /appfuse)
+     * @param cookie   the cookie to delete
+     * @param path     the path on which the cookie was set (i.e. /appfuse)
      */
     public static void deleteCookie(HttpServletResponse response,
                                     Cookie cookie, String path) {
@@ -87,13 +86,13 @@ public final class RequestUtil {
     /**
      * Convenience method to get the application's URL based on request
      * variables.
-     * 
+     *
      * @param request the current request
      * @return URL to application
      */
     public static String getAppURL(HttpServletRequest request) {
         if (request == null) return "";
-        
+
         StringBuffer url = new StringBuffer();
         int port = request.getServerPort();
         if (port < 0) {

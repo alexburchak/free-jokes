@@ -1,5 +1,6 @@
-package org.translations.webapp.controller;
+package org.translations.web.controller;
 
+import net.abbreviations.core.service.UserService;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,14 +22,12 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
-import net.abbreviations.core.service.UserService;
-
 /**
  * Implementation of <strong>SimpleFormController</strong> that contains
  * convenience methods for subclasses.  For example, getting the current
  * user and saving messages/errors. This class is intended to
  * be a base class for all Form controllers.
- *
+ * <p/>
  * <p><a href="BaseFormController.java.html"><i>View Source</i></a></p>
  *
  * @author <a href="mailto:matt@raibledesigns.com">Matt Raible</a>
@@ -70,7 +69,7 @@ public class BaseFormController implements ServletContextAware {
         errors.add(error);
         request.getSession().setAttribute("errors", errors);
     }
-    
+
     @SuppressWarnings("unchecked")
     public void saveMessage(HttpServletRequest request, String msg) {
         List messages = (List) request.getSession().getAttribute(MESSAGES_KEY);
@@ -106,7 +105,7 @@ public class BaseFormController implements ServletContextAware {
      * @return
      */
     public String getText(String msgKey, String arg, Locale locale) {
-        return getText(msgKey, new Object[] { arg }, locale);
+        return getText(msgKey, new Object[]{arg}, locale);
     }
 
     /**
@@ -123,29 +122,30 @@ public class BaseFormController implements ServletContextAware {
 
     /**
      * Set up a custom property editor for converting form inputs to real objects
+     *
      * @param request the current request
-     * @param binder the data binder
+     * @param binder  the data binder
      */
     @InitBinder
     protected void initBinder(HttpServletRequest request,
                               ServletRequestDataBinder binder) {
         binder.registerCustomEditor(Integer.class, null,
-                                    new CustomNumberEditor(Integer.class, null, true));
+                new CustomNumberEditor(Integer.class, null, true));
         binder.registerCustomEditor(Long.class, null,
-                                    new CustomNumberEditor(Long.class, null, true));
+                new CustomNumberEditor(Long.class, null, true));
         binder.registerCustomEditor(byte[].class,
-                                    new ByteArrayMultipartFileEditor());
-        SimpleDateFormat dateFormat = 
-            new SimpleDateFormat(getText("date.format", request.getLocale()));
+                new ByteArrayMultipartFileEditor());
+        SimpleDateFormat dateFormat =
+                new SimpleDateFormat(getText("date.format", request.getLocale()));
         dateFormat.setLenient(false);
-        binder.registerCustomEditor(Date.class, null, 
-                                    new CustomDateEditor(dateFormat, true));
+        binder.registerCustomEditor(Date.class, null,
+                new CustomDateEditor(dateFormat, true));
     }
 
     public void setTemplateName(String templateName) {
         this.templateName = templateName;
     }
-   
+
     public final BaseFormController setCancelView(String cancelView) {
         this.cancelView = cancelView;
         return this;
@@ -153,16 +153,16 @@ public class BaseFormController implements ServletContextAware {
 
     public final String getCancelView() {
         // Default to successView if cancelView is invalid
-        if (this.cancelView == null || this.cancelView.length()==0) {
+        if (this.cancelView == null || this.cancelView.length() == 0) {
             return getSuccessView();
         }
-        return this.cancelView;   
+        return this.cancelView;
     }
 
     public final String getSuccessView() {
         return this.successView;
     }
-    
+
     public final BaseFormController setSuccessView(String successView) {
         this.successView = successView;
         return this;

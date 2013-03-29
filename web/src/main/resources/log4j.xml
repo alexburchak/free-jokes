@@ -13,7 +13,6 @@
         <level value="ERROR"/>
     </logger>
 
-    <!-- Suppress success logging from InteractiveAuthenticationSuccessEvent -->
     <logger name="org.springframework.security">
         <level value="ERROR"/>
     </logger>

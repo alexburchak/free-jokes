@@ -1,4 +1,4 @@
-package org.translations.webapp.controller;
+package org.translations.web.controller;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -17,7 +17,7 @@ import java.util.List;
 /**
  * This class is used to reload the drop-downs initialized in the
  * StartupListener.
- *
+ * <p/>
  * <p>
  * <a href="ReloadController.java.html"><i>View Source</i></a>
  * </p>
@@ -33,7 +33,7 @@ public class ReloadController {
     @SuppressWarnings("unchecked")
     public ModelAndView handleRequest(HttpServletRequest request,
                                       HttpServletResponse response)
-    throws Exception {
+            throws Exception {
         if (log.isDebugEnabled()) {
             log.debug("Entering 'execute' method");
         }
@@ -73,5 +73,5 @@ public class ReloadController {
 
         return null;
     }
-    
+
 }

@@ -15,7 +15,7 @@
 
     <jaxws:endpoint id="userService" implementor="#userService" address="/UserService"/>
     <!-- Add new endpoints for additional services you'd like to expose -->
-    
+
     <jaxrs:server address="/api">
         <jaxrs:features>
             <cxf:logging/>

@@ -1,4 +1,4 @@
-package org.translations.webapp.util;
+package org.translations.web.util;
 
 import org.apache.commons.validator.Field;
 import org.apache.commons.validator.GenericValidator;
@@ -11,7 +11,7 @@ import org.springmodules.validation.commons.FieldChecks;
 /**
  * ValidationUtil Helper class for performing custom validations that
  * aren't already included in the core Commons Validator.
- *
+ * <p/>
  * <p>
  * <a href="ValidationUtil.java.html"><i>View Source</i></a>
  * </p>
@@ -23,6 +23,7 @@ public class ValidationUtil {
 
     /**
      * Validates that two fields match.
+     *
      * @param bean
      * @param va
      * @param field
@@ -31,7 +32,7 @@ public class ValidationUtil {
     public static boolean validateTwoFields(Object bean, ValidatorAction va,
                                             Field field, Errors errors) {
         String value =
-            ValidatorUtils.getValueAsString(bean, field.getProperty());
+                ValidatorUtils.getValueAsString(bean, field.getProperty());
         String sProperty2 = field.getVarValue("secondProperty");
         String value2 = ValidatorUtils.getValueAsString(bean, sProperty2);
 

@@ -4,7 +4,7 @@
         <pattern>/*ajax=true*</pattern>
         <pattern>/struts/*</pattern>
         <pattern>/resources/*</pattern>
-    </excludes> 
+    </excludes>
     <decorator name="default" page="default.jsp">
         <pattern>/*</pattern>
     </decorator>
