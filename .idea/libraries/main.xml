@@ -57,6 +57,7 @@
       <root url="jar://$PROJECT_DIR$/lib/main/aspectjtools-1.7.1.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/main/aspectjweaver-1.7.1.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/main/commons-fileupload-1.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/main/javax.inject-1.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

@@ -193,6 +193,11 @@
             <artifactId>activemq-core</artifactId>
             <version>${activemq.version}</version>
         </dependency>
+        <dependency>
+            <groupId>javax.inject</groupId>
+            <artifactId>javax.inject</artifactId>
+            <version>1</version>
+        </dependency>
     </dependencies>
 
     <build>
