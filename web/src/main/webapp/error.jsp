@@ -9,6 +9,8 @@
     <div class="container">
         <h1>Something went wrong</h1>
 
+        <img src="/images/pills.jpg"/>
+
         <p>Have no idea what to do</p>
     </div>
 </body>

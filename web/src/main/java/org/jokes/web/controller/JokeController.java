@@ -1,13 +1,10 @@
-package org.translations.web.controller;
+package org.jokes.web.controller;
 
 import net.jokes.core.service.JokeService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.view.json.MappingJacksonJsonView;
 
 import javax.inject.Inject;
 
@@ -18,7 +15,7 @@ public class JokeController {
 
     @RequestMapping(value = "/jokes", method = RequestMethod.GET)
     @ResponseBody
-    public ModelAndView showContent() {
-        return new ModelAndView(new MappingJacksonJsonView());
+    public Object showContent() {
+        return jokeService.findAll();
     }
 }

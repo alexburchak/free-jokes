@@ -1,4 +1,4 @@
-package org.translations.web.util;
+package org.jokes.web.util;
 
 import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;
