@@ -6,7 +6,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>net.abbreviations</groupId>
+        <groupId>net.jokes</groupId>
         <artifactId>root</artifactId>
         <version>1.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
@@ -14,7 +14,7 @@
 
     <artifactId>core</artifactId>
     <packaging>jar</packaging>
-    <name>net.abbreviations core</name>
+    <name>net.jokes core</name>
 
     <dependencies>
         <dependency>
