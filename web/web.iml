@@ -20,13 +20,13 @@
         <fileset id="web: application context" name="MVC application context" removed="false">
           <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/applicationContext.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/applicationContext-security.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/applicationContext-resources.xml</file>
+          <file>file://$MODULE_DIR$/../core/src/main/resources/applicationContext-resources.xml</file>
           <file>file://$MODULE_DIR$/../core/src/test/resources/activemq.xml</file>
           <file>file://$MODULE_DIR$/../core/src/main/resources/applicationContext-core.xml</file>
           <file>file://$MODULE_DIR$/../core/src/test/resources/test-applicationContext.xml</file>
         </fileset>
         <fileset id="fileset1" name="XML Application Context" removed="false">
-          <file>file://$MODULE_DIR$/src/main/resources/applicationContext-resources.xml</file>
+          <file>file://$MODULE_DIR$/../core/src/main/resources/applicationContext-resources.xml</file>
         </fileset>
         <fileset id="fileset2" name="Annotation Config Application Context" removed="false" type="annoContext">
           <file>jar://$MODULE_DIR$/../lib/main/spring-tx-3.2.1.RELEASE.jar!/org/springframework/transaction/annotation/AbstractTransactionManagementConfiguration.class</file>

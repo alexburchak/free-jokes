@@ -105,7 +105,7 @@
                     </components>
                     <componentProperties>
                         <persistenceunit>persistenceUnit</persistenceunit>
-                        <propertyfile>target/test-classes/jdbc.properties</propertyfile>
+                        <propertyfile>target/classes/jdbc.properties</propertyfile>
                         <jdk5>true</jdk5>
                         <outputfilename>schema.sql</outputfilename>
                         <skip>${skipTests}</skip>
