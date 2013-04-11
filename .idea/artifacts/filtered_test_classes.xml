@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact build-on-make="true" name="filtered-test-classes">
+    <output-path>$PROJECT_DIR$/out/core/test-classes</output-path>
+    <root id="root">
+      <element id="file-copy" path="$PROJECT_DIR$/core/target/test-classes/jdbc.properties" />
+    </root>
+  </artifact>
+</component>

@@ -30,7 +30,7 @@
     </bean>
 
     <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
-        <property name="basename" value="ApplicationResources"/>
+        <property name="basename" value="applicationResources"/>
         <property name="useCodeAsDefaultMessage" value="true"/>
     </bean>
 

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AjcSettings">
+    <option name="ajcPath" value="$PROJECT_DIR$/lib/main/aspectjtools-1.7.1.jar" />
+    <option name="cmdLineParams" value="-Xmx512m -Xms1024m" />
+    <option name="explicitAspectPath" value="true" />
+    <option name="aspectPath">
+      <projectLibrary>
+        <option name="name" value="main" />
+      </projectLibrary>
+    </option>
+  </component>
+  <component name="CompilerConfiguration">
+    <option name="DEFAULT_COMPILER" value="ajc" />
+    <resourceExtensions />
+    <wildcardResourcePatterns>
+      <entry name="!?*.java" />
+    </wildcardResourcePatterns>
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="false">
+        <processorPath useClasspath="true" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>
+

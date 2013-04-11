@@ -1,15 +1,15 @@
-<%@ include file="/common/taglibs.jsp" %>
+<%@ page language="java" isErrorPage="true" %>
+<!DOCTYPE html>
 
-<page:applyDecorator name="default">
+<html>
+<head>
+    <title>Error page: 403</title>
+</head>
+<body id="error">
+    <div class="container">
+        <h1>403</h1>
 
-    <head>
-        <title><fmt:message key="403.title"/></title>
-        <meta name="heading" content="<fmt:message key='403.title'/>"/>
-    </head>
-
-    <p>
-        <fmt:message key="403.message">
-            <fmt:param><c:url value="/"/></fmt:param>
-        </fmt:message>
-    </p>
-</page:applyDecorator>
+        <p><a href="http://en.wikipedia.org/wiki/HTTP_403">HTTP error 403 on Wikipedia</a></p>
+    </div>
+</body>
+</html>
