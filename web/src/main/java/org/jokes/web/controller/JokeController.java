@@ -15,7 +15,7 @@ public class JokeController {
 
     @RequestMapping(value = "/jokes", method = RequestMethod.GET)
     @ResponseBody
-    public Object showContent() {
+    public Object getJokes() {
         return jokeService.findAll();
     }
 }

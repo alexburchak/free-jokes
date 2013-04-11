@@ -16,9 +16,6 @@
     <mvc:resources mapping="/styles/**" location="/styles/*"/>
     <mvc:resources mapping="/images/**" location="/images/*"/>
 
-    <mvc:view-controller path="/admin/activeUsers" view-name="admin/activeUsers"/>
-    <mvc:view-controller path="/mainMenu" view-name="mainMenu"/>
-
     <bean id="exceptionResolver" class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
         <property name="exceptionMappings">
             <props>
