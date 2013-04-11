@@ -58,6 +58,7 @@
       <root url="jar://$PROJECT_DIR$/lib/main/aspectjweaver-1.7.1.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/main/commons-fileupload-1.2.1.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/main/javax.inject-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/main/hsqldb-2.2.9.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

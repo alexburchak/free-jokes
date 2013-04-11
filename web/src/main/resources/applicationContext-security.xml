@@ -10,8 +10,8 @@
     </authentication-manager>
 
     <http auto-config="true">
-        <intercept-url pattern="/images/**" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
-        <intercept-url pattern="/styles/**" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
+        <intercept-url pattern="/images" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
+        <intercept-url pattern="/styles" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
         <intercept-url pattern="/scripts/**" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
 
         <intercept-url pattern="/WEB-INF/pages" access="ROLE_ANONYMOUS,ROLE_ADMIN,ROLE_USER"/>

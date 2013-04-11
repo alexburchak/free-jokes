@@ -1,4 +1,4 @@
-package org.jokes.web.controller;
+package net.jokes.web.controller;
 
 import net.jokes.core.service.JokeService;
 import org.springframework.stereotype.Controller;

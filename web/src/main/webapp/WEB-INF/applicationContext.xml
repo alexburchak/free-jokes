@@ -8,5 +8,7 @@
 
     <context:annotation-config/>
 
-    <context:component-scan base-package="org.jokes.web"/>
+    <context:component-scan base-package="net.jokes.web">
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
 </beans>
