@@ -74,6 +74,8 @@
         <displaytag.version>1.2</displaytag.version>
         <springmodules.validation.version>0.8</springmodules.validation.version>
 
+        <jackson.version>1.9.2</jackson.version>
+
         <amp.genericCore>true</amp.genericCore>
         <amp.fullSource>false</amp.fullSource>
 

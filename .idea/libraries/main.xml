@@ -59,6 +59,8 @@
       <root url="jar://$PROJECT_DIR$/lib/main/commons-fileupload-1.2.1.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/main/javax.inject-1.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/main/hsqldb-2.2.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/main/jackson-core-lgpl-1.9.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/main/jackson-mapper-lgpl-1.9.2.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

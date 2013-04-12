@@ -2,7 +2,7 @@
   <artifact build-on-make="true" name="filtered-web-resources">
     <output-path>$PROJECT_DIR$/out/web/classes</output-path>
     <root id="root">
-      <element id="file-copy" path="$PROJECT_DIR$/web/target/web-1.0-SNAPSHOT/WEB-INF/classes/jdbc.properties" />
+      <element id="file-copy" path="$PROJECT_DIR$/core/target/classes/jdbc.properties" />
     </root>
   </artifact>
 </component>
