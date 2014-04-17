@@ -1,20 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:context="http://www.springframework.org/schema/context"
-       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:axon="http://www.axonframework.org/schema/core"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
-       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
-       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd"
-       default-lazy-init="true">
+       http://www.axonframework.org/schema/core http://www.axonframework.org/schema/axon-core-2.0.xsd">
 
-    <import resource="applicationContext-resources.xml"/>
+    <import resource="applicationContext-core.xml"/>
+    <import resource="applicationContext-datasource.xml"/>
 
-    <context:spring-configured/>
+    <axon:annotation-config/>
 
-    <context:annotation-config/>
+    <axon:jpa-event-store id="eventStore"/>
 
-    <context:component-scan base-package="net.jokes.core"/>
+    <axon:event-bus id="eventBus"/>
 
-    <aop:aspectj-autoproxy/>
+    <axon:command-bus id="commandBus" transaction-manager="transactionManager"/>
+
+    <bean id="jokePrototype" class="net.jokes.core.domain.Joke" scope="prototype"/>
+
+    <bean id="jokeAggregateFactory" class="org.axonframework.eventsourcing.SpringPrototypeAggregateFactory">
+        <property name="prototypeBeanName" value="jokePrototype"/>
+    </bean>
+
+    <bean id="jokeRepository" class="org.axonframework.eventsourcing.EventSourcingRepository">
+        <constructor-arg ref="jokeAggregateFactory"/>
+        <constructor-arg>
+            <bean class="org.axonframework.repository.PessimisticLockManager"/>
+        </constructor-arg>
+        <property name="eventStore" ref="eventStore"/>
+        <property name="eventBus" ref="eventBus"/>
+    </bean>
+
+    <bean id="jokeGateway" class="org.axonframework.commandhandling.gateway.CommandGatewayFactoryBean">
+        <property name="commandBus" ref="commandBus"/>
+        <property name="commandDispatchInterceptors">
+            <list>
+                <bean class="org.axonframework.commandhandling.interceptors.BeanValidationInterceptor"/>
+            </list>
+        </property>
+        <property name="gatewayInterface" value="net.jokes.core.integration.JokeGateway"/>
+    </bean>
 </beans>

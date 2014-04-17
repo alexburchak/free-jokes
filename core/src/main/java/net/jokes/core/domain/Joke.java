@@ -1,59 +1,51 @@
 package net.jokes.core.domain;
 
-import javax.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+import net.jokes.core.event.JokeAddedEvent;
+import net.jokes.core.event.VoteAddedEvent;
+import org.axonframework.eventhandling.annotation.EventHandler;
+import org.axonframework.eventsourcing.annotation.AbstractAnnotatedAggregateRoot;
+import org.axonframework.eventsourcing.annotation.AggregateIdentifier;
+
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
-import java.util.Date;
+import java.util.ArrayList;
+import java.util.List;
 
-@Entity
-@Table(name = "joke", uniqueConstraints = {@UniqueConstraint(name = "joke_text_uk", columnNames = {"joke_text"})})
-public class Joke {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false, updatable = false)
-    private long id;
+@ToString
+@NoArgsConstructor
+public class Joke extends AbstractAnnotatedAggregateRoot<String> {
+    private static final long serialVersionUID = 4822496415698157407L;
 
-    @Enumerated(EnumType.STRING)
-    @Column(name = "status", nullable = false, length = 32)
+    @AggregateIdentifier
+    @Getter
+    private String id;
+
     @NotNull
-    private Status status;
-
-    @Column(name = "joke_text", nullable = false, updatable = false)
-    @NotNull
-    @Size(min = 1)
+    @Getter
     private String text;
 
-    @Column(name = "created", nullable = false, updatable = false)
-    @NotNull
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date created = new Date();
+    @Getter
+    private List<Vote> votes;
 
-    public long getId() {
-        return id;
+    public Joke(String id, String text) {
+        apply(new JokeAddedEvent(id, text));
     }
 
-    public Status getStatus() {
-        return status;
+    public void addVote(Vote vote) {
+        apply(new VoteAddedEvent(vote.getUserName(), vote.getText(), vote.getValue()));
     }
 
-    public void setStatus(Status status) {
-        this.status = status;
+    @EventHandler
+    public void handleJokeAddedEvent(JokeAddedEvent event) {
+        this.id = event.getId();
+        this.text = event.getText();
+        this.votes = new ArrayList<Vote>();
     }
 
-    public String getText() {
-        return text;
-    }
-
-    public void setText(String text) {
-        this.text = text;
-    }
-
-    public Date getCreated() {
-        return created;
-    }
-
-    @Override
-    public String toString() {
-        return text;
+    @EventHandler
+    public void handleVoteAddedEvent(VoteAddedEvent event) {
+        this.votes.add(new Vote(event.getUserName(), event.getText(), event.getValue()));
     }
 }
