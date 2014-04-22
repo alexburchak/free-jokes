@@ -3,8 +3,8 @@ package net.jokes.core.integration.impl;
 import lombok.ToString;
 import net.jokes.core.command.AddJokeCommand;
 import net.jokes.core.command.AddVoteCommand;
+import net.jokes.core.command.AddVoteCommandEx;
 import net.jokes.core.domain.Joke;
-import net.jokes.core.domain.Vote;
 import net.jokes.core.integration.JokeGateway;
 import org.axonframework.commandhandling.annotation.CommandHandler;
 import org.axonframework.domain.IdentifierFactory;
@@ -36,7 +36,14 @@ public class JokeCommandHandler implements JokeGateway {
     public void addVote(AddVoteCommand command) {
         Joke joke = repository.load(command.getJokeId());
 
-        Vote vote = new Vote(command.getUserName(), command.getText(), command.getValue());
-        joke.addVote(vote);
+        joke.addVote(command.getUserName(), command.getText());
+    }
+
+    @CommandHandler
+    @Override
+    public void addVote(AddVoteCommandEx command) {
+        Joke joke = repository.load(command.getJokeId());
+
+        joke.addVote(command.getUserName(), command.getText(), command.getValue());
     }
 }

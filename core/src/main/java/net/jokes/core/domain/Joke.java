@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 import net.jokes.core.event.JokeAddedEvent;
+import net.jokes.core.event.VoteAddedEventV2;
 import net.jokes.core.event.VoteAddedEvent;
 import org.axonframework.eventhandling.annotation.EventHandler;
 import org.axonframework.eventsourcing.annotation.AbstractAnnotatedAggregateRoot;
@@ -33,8 +34,12 @@ public class Joke extends AbstractAnnotatedAggregateRoot<String> {
         apply(new JokeAddedEvent(id, text));
     }
 
-    public void addVote(Vote vote) {
-        apply(new VoteAddedEvent(vote.getUserName(), vote.getText(), vote.getValue()));
+    public void addVote(String userName, String text) {
+        apply(new VoteAddedEvent(userName, text));
+    }
+
+    public void addVote(String userName, String text, VoteValue value) {
+        apply(new VoteAddedEventV2(userName, text, value));
     }
 
     @EventHandler
@@ -45,7 +50,13 @@ public class Joke extends AbstractAnnotatedAggregateRoot<String> {
     }
 
     @EventHandler
+    @Deprecated
     public void handleVoteAddedEvent(VoteAddedEvent event) {
+        this.votes.add(new Vote(event.getUserName(), event.getText(), VoteValue.INDIFFERENT));
+    }
+
+    @EventHandler
+    public void handleVoteAddedEventV2(VoteAddedEventV2 event) {
         this.votes.add(new Vote(event.getUserName(), event.getText(), event.getValue()));
     }
 }

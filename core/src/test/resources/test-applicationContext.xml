@@ -10,11 +10,19 @@
 
     <axon:annotation-config/>
 
-    <axon:jpa-event-store id="eventStore"/>
+    <axon:jpa-event-store id="eventStore">
+        <axon:upcasters>
+            <bean class="net.jokes.core.event.VoteAddedEventUpcaster"/>
+        </axon:upcasters>
+    </axon:jpa-event-store>
 
     <axon:event-bus id="eventBus"/>
 
-    <axon:command-bus id="commandBus" transaction-manager="transactionManager"/>
+    <axon:command-bus id="commandBus" transaction-manager="transactionManager">
+        <axon:handlerInterceptors>
+            <bean class="org.axonframework.commandhandling.interceptors.LoggingInterceptor"/>
+        </axon:handlerInterceptors>
+    </axon:command-bus>
 
     <bean id="jokePrototype" class="net.jokes.core.domain.Joke" scope="prototype"/>
 

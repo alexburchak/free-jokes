@@ -1,7 +1,6 @@
 package net.jokes.core.command;
 
 import lombok.*;
-import net.jokes.core.domain.VoteValue;
 
 import javax.validation.constraints.NotNull;
 
@@ -9,6 +8,7 @@ import javax.validation.constraints.NotNull;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
+@Deprecated
 public class AddVoteCommand {
     @NotNull
     private String jokeId;
@@ -17,7 +17,4 @@ public class AddVoteCommand {
     private String userName;
 
     private String text;
-
-    @NotNull
-    private VoteValue value;
 }
