@@ -15,7 +15,6 @@ import org.axonframework.eventstore.jpa.JpaEventStore;
 import org.axonframework.eventstore.management.Criteria;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.testng.Assert;
@@ -34,9 +33,6 @@ public class JokeTest extends AbstractTestNGSpringContextTests {
     @Autowired
     @Qualifier("eventStore")
     private EventStore eventStore;
-
-    @Autowired
-    private ApplicationContext applicationContext;
 
     @Test
     public void testGatewayAddCommands() {

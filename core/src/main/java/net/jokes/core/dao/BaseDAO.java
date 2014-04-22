@@ -7,7 +7,5 @@ public interface BaseDAO<ID extends Serializable, T> {
 
     T save(T entity);
 
-    T update(T entity);
-
     void remove(T entity);
 }

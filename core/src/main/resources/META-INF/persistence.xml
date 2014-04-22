@@ -7,6 +7,8 @@
         <class>org.axonframework.eventstore.jpa.DomainEventEntry</class>
         <class>org.axonframework.eventstore.jpa.SnapshotEventEntry</class>
 
+        <class>net.jokes.core.view.JokeView</class>
+
         <properties>
             <property name="hibernate.show.sql" value="true"/>
             <property name="hibernate.ejb.naming_strategy" value="org.hibernate.cfg.ImprovedNamingStrategy"/>

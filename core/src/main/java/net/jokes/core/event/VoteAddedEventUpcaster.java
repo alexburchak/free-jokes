@@ -17,24 +17,25 @@ import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import java.util.List;
 
-public class VoteAddedEventUpcaster implements Upcaster<Object> {
+@SuppressWarnings("deprecation")
+public class VoteAddedEventUpcaster implements Upcaster<byte[]> {
     @Override
     public boolean canUpcast(SerializedType serializedType) {
         return serializedType.getName().equals(VoteAddedEvent.class.getName());
     }
 
     @Override
-    public Class<Object> expectedRepresentationType() {
-        return Object.class;
+    public Class<byte[]> expectedRepresentationType() {
+        return byte[].class;
     }
 
     @Override
-    public List<SerializedObject<?>> upcast(SerializedObject<Object> intermediateRepresentation, List<SerializedType> expectedTypes, UpcastingContext context) {
+    public List<SerializedObject<?>> upcast(SerializedObject<byte[]> intermediateRepresentation, List<SerializedType> expectedTypes, UpcastingContext context) {
         try {
-            VoteAddedEvent sourceEvent = (VoteAddedEvent) new XStream().fromXML(new InputStreamReader(new ByteArrayInputStream((byte[]) intermediateRepresentation.getData()), CharEncoding.ISO_8859_1));
+            VoteAddedEvent sourceEvent = (VoteAddedEvent) new XStream().fromXML(new InputStreamReader(new ByteArrayInputStream(intermediateRepresentation.getData()), CharEncoding.ISO_8859_1));
             String targetXML = new XStream().toXML(new VoteAddedEventV2(sourceEvent.getUserName(), sourceEvent.getText(), VoteValue.INDIFFERENT));
 
-            return Lists.<SerializedObject<?>>newArrayList(new SimpleSerializedObject<byte[]>(targetXML.getBytes(CharEncoding.ISO_8859_1), byte[].class, expectedTypes.get(0)));
+            return Lists.<SerializedObject<?>>newArrayList(new SimpleSerializedObject<>(targetXML.getBytes(CharEncoding.ISO_8859_1), byte[].class, expectedTypes.get(0)));
         } catch (UnsupportedEncodingException e) {
             throw new InfrastructureException("Failed to upcast event of type " + intermediateRepresentation.getType(), e);
         }
