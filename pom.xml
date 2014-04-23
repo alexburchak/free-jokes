@@ -88,6 +88,8 @@
         <axon.version>2.0</axon.version>
 
         <lombok.version>1.12.2</lombok.version>
+
+        <guava.version>11.0.2</guava.version>
     </properties>
 
     <dependencies>
